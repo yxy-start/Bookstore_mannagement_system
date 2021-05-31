@@ -1,0 +1,14 @@
+C:\Users\HP\AppData\Local\Temporary Projects\书店管理系统\bin\Debug\书店管理系统.exe.config
+F:\Visual Studio2012\书店管理系统\书店管理系统\bin\Debug\书店管理系统.exe.config
+F:\Visual Studio2012\书店管理系统\书店管理系统\bin\Debug\书店管理系统.exe
+F:\Visual Studio2012\书店管理系统\书店管理系统\bin\Debug\书店管理系统.pdb
+F:\Visual Studio2012\书店管理系统\书店管理系统\bin\Debug\书店管理系统.xml
+F:\Visual Studio2012\书店管理系统\书店管理系统\obj\Debug\书店管理系统.Resources.resources
+F:\Visual Studio2012\书店管理系统\书店管理系统\obj\Debug\书店管理系统.登录界面.resources
+F:\Visual Studio2012\书店管理系统\书店管理系统\obj\Debug\书店管理系统.vbproj.GenerateResource.Cache
+F:\Visual Studio2012\书店管理系统\书店管理系统\obj\Debug\书店管理系统.exe
+F:\Visual Studio2012\书店管理系统\书店管理系统\obj\Debug\书店管理系统.xml
+F:\Visual Studio2012\书店管理系统\书店管理系统\obj\Debug\书店管理系统.pdb
+F:\Visual Studio2012\书店管理系统\书店管理系统\obj\Debug\书店管理系统.系统管理员界面.resources
+F:\Visual Studio2012\书店管理系统\书店管理系统\obj\Debug\书店管理系统.注册界面.resources
+F:\Visual Studio2012\书店管理系统\书店管理系统\obj\Debug\书店管理系统.用户查询.resources
