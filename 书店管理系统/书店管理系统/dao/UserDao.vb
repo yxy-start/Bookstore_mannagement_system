@@ -85,4 +85,28 @@ Module UserDao
         Return user
     End Function
 
+    Public Function userInsert(username As String, passworld As String, sex As String, iphone As Long)
+        Dim user As New UserRegister
+        Dim f As Integer
+        Try
+            Dim objconn As New SqlConnection(conn2)       '创建连接对象
+            Dim strsql As String = "insert into 普通用户表(用户名,用户密码,性别,电话号码) values ('" & username & "','" & passworld & "','" & sex & "','" & iphone & "')"
+            objconn.Open()
+            Dim objcmd As New SqlCommand(strsql, objconn)
+            objcmd.ExecuteNonQuery()
+            objconn.Close()
+            objcmd.Dispose()
+            MsgBox("添加成功！", 64, "提示")
+
+        Catch ex As Exception
+            MsgBox("添加失败：" + ex.Message)
+        End Try
+        If (f > 0) Then
+            Return 1
+        Else
+            Return 0
+        End If
+
+    End Function
+
 End Module

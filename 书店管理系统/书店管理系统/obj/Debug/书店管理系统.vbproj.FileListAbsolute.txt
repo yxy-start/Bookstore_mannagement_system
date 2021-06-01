@@ -14,7 +14,3 @@ F:\Visual Studio2012\书店管理系统\书店管理系统\obj\Debug\书店管�
 F:\Visual Studio2012\书店管理系统\书店管理系统\obj\Debug\书店管理系统.UserLogin.resources
 F:\Visual Studio2012\书店管理系统\书店管理系统\obj\Debug\书店管理系统.User_Index.resources
 F:\Visual Studio2012\书店管理系统\书店管理系统\obj\Debug\书店管理系统.UserRegister.resources
-D:\.net实验\Bookstore_mannagement_system\书店管理系统\书店管理系统\bin\Debug\书店管理系统.exe.config
-D:\.net实验\Bookstore_mannagement_system\书店管理系统\书店管理系统\obj\Debug\书店管理系统.exe
-D:\.net实验\Bookstore_mannagement_system\书店管理系统\书店管理系统\obj\Debug\书店管理系统.xml
-D:\.net实验\Bookstore_mannagement_system\书店管理系统\书店管理系统\obj\Debug\书店管理系统.pdb

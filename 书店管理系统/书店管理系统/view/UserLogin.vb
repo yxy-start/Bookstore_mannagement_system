@@ -2,7 +2,8 @@
 
     Private 用户名 As String
     Private 用户密码 As String
-    Private 角色 As String
+    Private 性别 As String
+    Private 电话号码 As Long
     Private table As String
 
     Public Function Get_用户名()
@@ -19,6 +20,22 @@
 
     Public Sub Set_用户密码(passworld As String)
         用户密码 = passworld
+    End Sub
+
+    Public Function Get_性别()
+        Return 性别
+    End Function
+
+    Public Sub Set_性别(sex As String)
+        性别 = sex
+    End Sub
+
+    Public Function Get_电话号码()
+        Return 电话号码
+    End Function
+
+    Public Sub Set_电话号码(iPhone As Long)
+        电话号码 = iPhone
     End Sub
 
     Public Function Get_table()
