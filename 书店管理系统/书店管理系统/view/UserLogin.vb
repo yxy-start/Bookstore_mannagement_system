@@ -1,9 +1,21 @@
-﻿Public Class UserLogin
-
+﻿
+Public Class UserLogin
     Private 用户名 As String
     Private 用户密码 As String
     Private 角色 As String
     Private table As String
+
+    Private Sub f()
+        'Dim s As Integer
+        's = Int((9999 - 1000 + 1) * Rnd() + 1000)
+        'Label5.Text = s
+        Dim s1, s2, s3, s4 As Integer
+        s1 = Int(9 - 0 + 1) * Rnd()
+        s2 = Int(9 - 0 + 1) * Rnd()
+        s3 = Int(9 - 0 + 1) * Rnd()
+        s4 = Int(9 - 0 + 1) * Rnd()
+        Label5.Text = s1 & s2 & s3 & s4
+    End Sub
 
     Public Function Get_用户名()
         Return 用户名
@@ -35,15 +47,22 @@
         Dim password As String = TextBox2.Text
         user.Set_用户名(username)
         user.Set_用户密码(password)
+        If TextBox3.Text = Label5.Text Then
+            If RadioButton1.Checked = True Then
+                user.Set_table("系统用户表")
 
-        If RadioButton1.Checked = True Then
-            user.Set_table("系统用户表")
-            UserSystemIndex(user)
-        ElseIf RadioButton2.Checked = True Then
-            user.Set_table("普通用户表")
-            UserIndex(user)
+                UserSystemIndex(user)
+            ElseIf RadioButton2.Checked = True Then
+                user.Set_table("普通用户表")
+                UserIndex(user)
+
+            Else
+                MsgBox("请选择角色！")
+            End If
         Else
-            MsgBox("请选择角色！")
+            MsgBox("验证码不正确，请重新输入！")
+            Label5.Text = ""
+            Call f()
         End If
     End Sub
 
@@ -56,15 +75,21 @@
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         TextBox1.Text = ""
         TextBox2.Text = ""
+
     End Sub
 
     Private Sub UserLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         TextBox1.Focus()
         TextBox2.PasswordChar = "*"
+        Call f()
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Dim zc As New UserRegister
-        zc.ShowDialog()
+        zc.Show()
+    End Sub
+
+    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
+
     End Sub
 End Class
