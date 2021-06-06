@@ -22,7 +22,6 @@ Partial Class UserLogin
     '不要使用代码编辑器修改它。
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim PictureBox1 As System.Windows.Forms.PictureBox
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UserLogin))
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -37,38 +36,19 @@ Partial Class UserLogin
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        PictureBox1 = New System.Windows.Forms.PictureBox()
-        CType(PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'PictureBox1
-        '
-        PictureBox1.BackColor = System.Drawing.Color.Transparent
-        PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        PictureBox1.Location = New System.Drawing.Point(79, 25)
-        PictureBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New System.Drawing.Size(195, 146)
-        PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        PictureBox1.TabIndex = 6
-        PictureBox1.TabStop = False
         '
         'Button3
         '
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-<<<<<<< HEAD
         Me.Button3.Location = New System.Drawing.Point(588, 620)
-=======
-        Me.Button3.Location = New System.Drawing.Point(548, 647)
->>>>>>> fc338710695b2d5c17dd9fc8e45dbaa02f7fed29
         Me.Button3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(106, 44)
@@ -79,11 +59,7 @@ Partial Class UserLogin
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-<<<<<<< HEAD
         Me.Button2.Location = New System.Drawing.Point(835, 620)
-=======
-        Me.Button2.Location = New System.Drawing.Point(802, 647)
->>>>>>> fc338710695b2d5c17dd9fc8e45dbaa02f7fed29
         Me.Button2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(106, 44)
@@ -95,11 +71,7 @@ Partial Class UserLogin
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.Black
-<<<<<<< HEAD
         Me.Button1.Location = New System.Drawing.Point(319, 620)
-=======
-        Me.Button1.Location = New System.Drawing.Point(286, 647)
->>>>>>> fc338710695b2d5c17dd9fc8e45dbaa02f7fed29
         Me.Button1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(106, 44)
@@ -120,19 +92,11 @@ Partial Class UserLogin
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
-<<<<<<< HEAD
         Me.GroupBox1.Location = New System.Drawing.Point(319, 177)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupBox1.Size = New System.Drawing.Size(622, 272)
-=======
-        Me.GroupBox1.Location = New System.Drawing.Point(298, 178)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.GroupBox1.Size = New System.Drawing.Size(622, 278)
->>>>>>> fc338710695b2d5c17dd9fc8e45dbaa02f7fed29
         Me.GroupBox1.TabIndex = 8
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "用户信息"
@@ -224,16 +188,14 @@ Partial Class UserLogin
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(353, 68)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(506, 57)
+        Me.Label1.Size = New System.Drawing.Size(504, 55)
         Me.Label1.TabIndex = 7
         Me.Label1.Text = "欢迎使用书店管理系统"
         '
-<<<<<<< HEAD
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
@@ -246,8 +208,6 @@ Partial Class UserLogin
         Me.PictureBox1.TabIndex = 6
         Me.PictureBox1.TabStop = False
         '
-=======
->>>>>>> fc338710695b2d5c17dd9fc8e45dbaa02f7fed29
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.Transparent
@@ -255,11 +215,7 @@ Partial Class UserLogin
         Me.GroupBox2.Controls.Add(Me.RadioButton1)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.GroupBox2.ForeColor = System.Drawing.Color.White
-<<<<<<< HEAD
         Me.GroupBox2.Location = New System.Drawing.Point(319, 466)
-=======
-        Me.GroupBox2.Location = New System.Drawing.Point(298, 477)
->>>>>>> fc338710695b2d5c17dd9fc8e45dbaa02f7fed29
         Me.GroupBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -292,31 +248,6 @@ Partial Class UserLogin
         Me.RadioButton1.Text = "系统管理员"
         Me.RadioButton1.UseVisualStyleBackColor = True
         '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(35, 190)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(141, 32)
-        Me.Label4.TabIndex = 16
-        Me.Label4.Text = "验 证 码："
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(202, 183)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(266, 39)
-        Me.TextBox3.TabIndex = 17
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(483, 186)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(102, 32)
-        Me.Label5.TabIndex = 18
-        Me.Label5.Text = "Label5"
-        '
         'UserLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
@@ -330,14 +261,14 @@ Partial Class UserLogin
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(PictureBox1)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "UserLogin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"
-        CType(PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
@@ -354,6 +285,7 @@ Partial Class UserLogin
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
     Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
