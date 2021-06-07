@@ -3,8 +3,8 @@ Imports System.Data.OleDb
 
 Module UserDao
 
-    Dim conn As String = "Provider=Sqloledb;data source=LAPTOP-BPSJLBP5;connect timeout=5;User ID=aaa;Password='1234567890';initial catalog=Bookstore;"
-    Dim conn2 As String = "data source=LAPTOP-BPSJLBP5;connect timeout=5;User ID=aaa;Password='1234567890';initial catalog=Bookstore;"
+    Dim conn As String = "Provider=Sqloledb;data source=DESKTOP-D3LOO8V;connect timeout=5;User ID=sa;Password='20204';initial catalog=Bookstore;"
+    Dim conn2 As String = "data source=DESKTOP-D3LOO8V;connect timeout=5;User ID=sa;Password='20204';initial catalog=Bookstore;"
 
     '方法：userSelectUsername();
     '作用：用于查询2个登录用户是否存在
