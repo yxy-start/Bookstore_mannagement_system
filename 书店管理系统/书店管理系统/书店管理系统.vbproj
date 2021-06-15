@@ -115,58 +115,58 @@
     </Compile>
     <Compile Include="service\BookService.vb" />
     <Compile Include="service\UserService.vb" />
-    <Compile Include="web\Book_User.Designer.vb">
+    <Compile Include="web\admin\BookManage\Book_User.Designer.vb">
       <DependentUpon>Book_User.vb</DependentUpon>
     </Compile>
-    <Compile Include="web\Book_User.vb">
+    <Compile Include="web\admin\BookManage\Book_User.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="web\Manage_User.Designer.vb">
+    <Compile Include="web\admin\UserManage\Manage_User.Designer.vb">
       <DependentUpon>Manage_User.vb</DependentUpon>
     </Compile>
-    <Compile Include="web\Manage_User.vb">
+    <Compile Include="web\admin\UserManage\Manage_User.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="web\UserRegister.Designer.vb">
+    <Compile Include="web\login\UserRegister.Designer.vb">
       <DependentUpon>UserRegister.vb</DependentUpon>
     </Compile>
-    <Compile Include="web\UserRegister.vb">
+    <Compile Include="web\login\UserRegister.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="web\User_Index.Designer.vb">
+    <Compile Include="web\user\User_Index.Designer.vb">
       <DependentUpon>User_Index.vb</DependentUpon>
     </Compile>
-    <Compile Include="web\User_Index.vb">
+    <Compile Include="web\user\User_Index.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="web\User_System_Index.Designer.vb">
+    <Compile Include="web\admin\User_System_Index.Designer.vb">
       <DependentUpon>User_System_Index.vb</DependentUpon>
     </Compile>
-    <Compile Include="web\User_System_Index.vb">
+    <Compile Include="web\admin\User_System_Index.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="web\UserLogin.Designer.vb">
+    <Compile Include="web\login\UserLogin.Designer.vb">
       <DependentUpon>UserLogin.vb</DependentUpon>
     </Compile>
-    <Compile Include="web\UserLogin.vb">
+    <Compile Include="web\login\UserLogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="web\UserUpdate.Designer.vb">
+    <Compile Include="web\login\UserUpdate.Designer.vb">
       <DependentUpon>UserUpdate.vb</DependentUpon>
     </Compile>
-    <Compile Include="web\UserUpdate.vb">
+    <Compile Include="web\login\UserUpdate.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="web\Book_System.Designer.vb">
+    <Compile Include="web\admin\BookManage\Book_System.Designer.vb">
       <DependentUpon>Book_System.vb</DependentUpon>
     </Compile>
-    <Compile Include="web\Book_System.vb">
+    <Compile Include="web\admin\BookManage\Book_System.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="web\用户查询.Designer.vb">
-      <DependentUpon>用户查询.vb</DependentUpon>
+    <Compile Include="web\user\UserQuery.Designer.vb">
+      <DependentUpon>UserQuery.vb</DependentUpon>
     </Compile>
-    <Compile Include="web\用户查询.vb">
+    <Compile Include="web\user\UserQuery.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -177,32 +177,32 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="web\Book_User.resx">
+    <EmbeddedResource Include="web\admin\BookManage\Book_User.resx">
       <DependentUpon>Book_User.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="web\Manage_User.resx">
+    <EmbeddedResource Include="web\admin\UserManage\Manage_User.resx">
       <DependentUpon>Manage_User.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="web\UserRegister.resx">
+    <EmbeddedResource Include="web\login\UserRegister.resx">
       <DependentUpon>UserRegister.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="web\User_Index.resx">
+    <EmbeddedResource Include="web\user\User_Index.resx">
       <DependentUpon>User_Index.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="web\User_System_Index.resx">
+    <EmbeddedResource Include="web\admin\User_System_Index.resx">
       <DependentUpon>User_System_Index.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="web\UserLogin.resx">
+    <EmbeddedResource Include="web\login\UserLogin.resx">
       <DependentUpon>UserLogin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="web\UserUpdate.resx">
+    <EmbeddedResource Include="web\login\UserUpdate.resx">
       <DependentUpon>UserUpdate.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="web\Book_System.resx">
+    <EmbeddedResource Include="web\admin\BookManage\Book_System.resx">
       <DependentUpon>Book_System.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="web\用户查询.resx">
-      <DependentUpon>用户查询.vb</DependentUpon>
+    <EmbeddedResource Include="web\user\UserQuery.resx">
+      <DependentUpon>UserQuery.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
