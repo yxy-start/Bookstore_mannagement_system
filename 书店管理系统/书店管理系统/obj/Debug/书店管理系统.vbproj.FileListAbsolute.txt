@@ -9,38 +9,11 @@ F:\Visual Studio2012\书店管理系统\书店管理系统\obj\Debug\书店管�
 F:\Visual Studio2012\书店管理系统\书店管理系统\obj\Debug\书店管理系统.xml
 F:\Visual Studio2012\书店管理系统\书店管理系统\obj\Debug\书店管理系统.pdb
 F:\Visual Studio2012\书店管理系统\书店管理系统\obj\Debug\书店管理系统.用户查询.resources
-F:\Visual Studio2012\书店管理系统\书店管理系统\obj\Debug\书店管理系统.图书查询.resources
 F:\Visual Studio2012\书店管理系统\书店管理系统\obj\Debug\书店管理系统.User_System_Index.resources
 F:\Visual Studio2012\书店管理系统\书店管理系统\obj\Debug\书店管理系统.UserLogin.resources
 F:\Visual Studio2012\书店管理系统\书店管理系统\obj\Debug\书店管理系统.User_Index.resources
 F:\Visual Studio2012\书店管理系统\书店管理系统\obj\Debug\书店管理系统.UserRegister.resources
-D:\.net实验\Bookstore_mannagement_system\书店管理系统\书店管理系统\bin\Debug\书店管理系统.exe.config
-D:\.net实验\Bookstore_mannagement_system\书店管理系统\书店管理系统\obj\Debug\书店管理系统.exe
-D:\.net实验\Bookstore_mannagement_system\书店管理系统\书店管理系统\obj\Debug\书店管理系统.xml
-D:\.net实验\Bookstore_mannagement_system\书店管理系统\书店管理系统\obj\Debug\书店管理系统.pdb
-D:\.net实验\Bookstore_mannagement_system\书店管理系统\书店管理系统\bin\Debug\书店管理系统.exe
-D:\.net实验\Bookstore_mannagement_system\书店管理系统\书店管理系统\bin\Debug\书店管理系统.pdb
-D:\.net实验\Bookstore_mannagement_system\书店管理系统\书店管理系统\bin\Debug\书店管理系统.xml
-D:\.net实验\Bookstore_mannagement_system\书店管理系统\书店管理系统\obj\Debug\书店管理系统.Resources.resources
-D:\.net实验\Bookstore_mannagement_system\书店管理系统\书店管理系统\obj\Debug\书店管理系统.UserRegister.resources
-D:\.net实验\Bookstore_mannagement_system\书店管理系统\书店管理系统\obj\Debug\书店管理系统.User_Index.resources
-D:\.net实验\Bookstore_mannagement_system\书店管理系统\书店管理系统\obj\Debug\书店管理系统.User_System_Index.resources
-D:\.net实验\Bookstore_mannagement_system\书店管理系统\书店管理系统\obj\Debug\书店管理系统.UserLogin.resources
-D:\.net实验\Bookstore_mannagement_system\书店管理系统\书店管理系统\obj\Debug\书店管理系统.图书查询.resources
-D:\.net实验\Bookstore_mannagement_system\书店管理系统\书店管理系统\obj\Debug\书店管理系统.用户查询.resources
-D:\.net实验\Bookstore_mannagement_system\书店管理系统\书店管理系统\obj\Debug\书店管理系统.vbproj.GenerateResource.Cache
-E:\Bookstore_mannagement_system\书店管理系统\书店管理系统\bin\Debug\书店管理系统.exe.config
-E:\Bookstore_mannagement_system\书店管理系统\书店管理系统\obj\Debug\书店管理系统.exe
-E:\Bookstore_mannagement_system\书店管理系统\书店管理系统\obj\Debug\书店管理系统.xml
-E:\Bookstore_mannagement_system\书店管理系统\书店管理系统\obj\Debug\书店管理系统.pdb
-E:\Bookstore_mannagement_system\书店管理系统\书店管理系统\bin\Debug\书店管理系统.exe
-E:\Bookstore_mannagement_system\书店管理系统\书店管理系统\bin\Debug\书店管理系统.pdb
-E:\Bookstore_mannagement_system\书店管理系统\书店管理系统\bin\Debug\书店管理系统.xml
-E:\Bookstore_mannagement_system\书店管理系统\书店管理系统\obj\Debug\书店管理系统.Resources.resources
-E:\Bookstore_mannagement_system\书店管理系统\书店管理系统\obj\Debug\书店管理系统.UserRegister.resources
-E:\Bookstore_mannagement_system\书店管理系统\书店管理系统\obj\Debug\书店管理系统.User_Index.resources
-E:\Bookstore_mannagement_system\书店管理系统\书店管理系统\obj\Debug\书店管理系统.User_System_Index.resources
-E:\Bookstore_mannagement_system\书店管理系统\书店管理系统\obj\Debug\书店管理系统.UserLogin.resources
-E:\Bookstore_mannagement_system\书店管理系统\书店管理系统\obj\Debug\书店管理系统.图书查询.resources
-E:\Bookstore_mannagement_system\书店管理系统\书店管理系统\obj\Debug\书店管理系统.用户查询.resources
-E:\Bookstore_mannagement_system\书店管理系统\书店管理系统\obj\Debug\书店管理系统.vbproj.GenerateResource.Cache
+F:\Visual Studio2012\书店管理系统\书店管理系统\obj\Debug\书店管理系统.UserUpdate.resources
+F:\Visual Studio2012\书店管理系统\书店管理系统\obj\Debug\书店管理系统.Book_User.resources
+F:\Visual Studio2012\书店管理系统\书店管理系统\obj\Debug\书店管理系统.Book_System.resources
+F:\Visual Studio2012\书店管理系统\书店管理系统\obj\Debug\书店管理系统.Manage_User.resources

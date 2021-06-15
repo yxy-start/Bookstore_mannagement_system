@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -70,6 +85,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bean\Book.vb" />
+    <Compile Include="bean\ManageUser.vb" />
+    <Compile Include="bean\User.vb" />
+    <Compile Include="BookstoreDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookstoreDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dao\BookDao.vb" />
+    <Compile Include="dao\ManageUserDao.vb" />
+    <Compile Include="service\ManageUserService.vb" />
+    <Compile Include="SQLResources.vb" />
     <Compile Include="dao\UserDao.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -86,41 +113,60 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="service\BookService.vb" />
     <Compile Include="service\UserService.vb" />
-    <Compile Include="view\UserRegister.Designer.vb">
+    <Compile Include="web\Book_User.Designer.vb">
+      <DependentUpon>Book_User.vb</DependentUpon>
+    </Compile>
+    <Compile Include="web\Book_User.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="web\Manage_User.Designer.vb">
+      <DependentUpon>Manage_User.vb</DependentUpon>
+    </Compile>
+    <Compile Include="web\Manage_User.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="web\UserRegister.Designer.vb">
       <DependentUpon>UserRegister.vb</DependentUpon>
     </Compile>
-    <Compile Include="view\UserRegister.vb">
+    <Compile Include="web\UserRegister.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\User_Index.Designer.vb">
+    <Compile Include="web\User_Index.Designer.vb">
       <DependentUpon>User_Index.vb</DependentUpon>
     </Compile>
-    <Compile Include="view\User_Index.vb">
+    <Compile Include="web\User_Index.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\User_System_Index.Designer.vb">
+    <Compile Include="web\User_System_Index.Designer.vb">
       <DependentUpon>User_System_Index.vb</DependentUpon>
     </Compile>
-    <Compile Include="view\User_System_Index.vb">
+    <Compile Include="web\User_System_Index.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\UserLogin.Designer.vb">
+    <Compile Include="web\UserLogin.Designer.vb">
       <DependentUpon>UserLogin.vb</DependentUpon>
     </Compile>
-    <Compile Include="view\UserLogin.vb">
+    <Compile Include="web\UserLogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\图书查询.Designer.vb">
-      <DependentUpon>图书查询.vb</DependentUpon>
+    <Compile Include="web\UserUpdate.Designer.vb">
+      <DependentUpon>UserUpdate.vb</DependentUpon>
     </Compile>
-    <Compile Include="view\图书查询.vb">
+    <Compile Include="web\UserUpdate.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\用户查询.Designer.vb">
+    <Compile Include="web\Book_System.Designer.vb">
+      <DependentUpon>Book_System.vb</DependentUpon>
+    </Compile>
+    <Compile Include="web\Book_System.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="web\用户查询.Designer.vb">
       <DependentUpon>用户查询.vb</DependentUpon>
     </Compile>
-    <Compile Include="view\用户查询.vb">
+    <Compile Include="web\用户查询.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -131,26 +177,46 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\UserRegister.resx">
+    <EmbeddedResource Include="web\Book_User.resx">
+      <DependentUpon>Book_User.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="web\Manage_User.resx">
+      <DependentUpon>Manage_User.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="web\UserRegister.resx">
       <DependentUpon>UserRegister.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\User_Index.resx">
+    <EmbeddedResource Include="web\User_Index.resx">
       <DependentUpon>User_Index.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\User_System_Index.resx">
+    <EmbeddedResource Include="web\User_System_Index.resx">
       <DependentUpon>User_System_Index.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\UserLogin.resx">
+    <EmbeddedResource Include="web\UserLogin.resx">
       <DependentUpon>UserLogin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\图书查询.resx">
-      <DependentUpon>图书查询.vb</DependentUpon>
+    <EmbeddedResource Include="web\UserUpdate.resx">
+      <DependentUpon>UserUpdate.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\用户查询.resx">
+    <EmbeddedResource Include="web\Book_System.resx">
+      <DependentUpon>Book_System.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="web\用户查询.resx">
       <DependentUpon>用户查询.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="BookstoreDataSet.xsc">
+      <DependentUpon>BookstoreDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BookstoreDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BookstoreDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BookstoreDataSet.xss">
+      <DependentUpon>BookstoreDataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -163,7 +229,26 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\书店logo5.png" />
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.4.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 4.0 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

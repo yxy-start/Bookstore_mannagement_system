@@ -6,22 +6,70 @@
 </name>
 </assembly>
 <members>
-<member name="P:书店管理系统.My.Resources.Resources.ResourceManager">
+<member name="T:书店管理系统.BookstoreDataSet.系统用户表DataTable">
 	<summary>
-  返回此类使用的缓存的 ResourceManager 实例。
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:书店管理系统.BookstoreDataSet.系统用户表Row">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:书店管理系统.BookstoreDataSet.系统用户表RowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:书店管理系统.BookstoreDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:书店管理系统.BookstoreDataSetTableAdapters.系统用户表TableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:书店管理系统.BookstoreDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(书店管理系统.BookstoreDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:书店管理系统.BookstoreDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(书店管理系统.BookstoreDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:书店管理系统.BookstoreDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(书店管理系统.BookstoreDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:书店管理系统.BookstoreDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:书店管理系统.BookstoreDataSetTableAdapters.TableAdapterManager.UpdateAll(书店管理系统.BookstoreDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:书店管理系统.BookstoreDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:书店管理系统.BookstoreDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:书店管理系统.BookstoreDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="P:书店管理系统.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
 </summary>
 </member><member name="P:书店管理系统.My.Resources.Resources.Culture">
 	<summary>
-  使用此强类型资源类，为所有资源查找
-  重写当前线程的 CurrentUICulture 属性。
-</summary>
-</member><member name="P:书店管理系统.My.Resources.Resources.书店logo5">
-	<summary>
-  查找 System.Drawing.Bitmap 类型的本地化资源。
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
 </summary>
 </member><member name="T:书店管理系统.My.Resources.Resources">
 	<summary>
-  一个强类型的资源类，用于查找本地化的字符串等。
+  A strongly-typed resource class, for looking up localized strings, etc.
 </summary>
 </member>
 </members>
