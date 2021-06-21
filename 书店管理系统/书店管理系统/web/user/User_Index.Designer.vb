@@ -44,14 +44,12 @@ Partial Class User_Index
         Me.图书类别管理ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.图书类别查询ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.图书类别查询ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.图书借还管理ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.借出登记ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.借出查询ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.还书管理ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.帮助ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.说明ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.退出系统ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.帮助ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -150,6 +148,7 @@ Partial Class User_Index
         '
         'ToolStrip1
         '
+        Me.ToolStrip1.BackColor = System.Drawing.Color.SteelBlue
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripButton3, Me.ToolStripButton4})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 27)
         Me.ToolStrip1.Name = "ToolStrip1"
@@ -211,7 +210,7 @@ Partial Class User_Index
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("华文行楷", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Red
-        Me.Label1.Location = New System.Drawing.Point(346, 166)
+        Me.Label1.Location = New System.Drawing.Point(346, 156)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(927, 63)
         Me.Label1.TabIndex = 33
@@ -228,7 +227,8 @@ Partial Class User_Index
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.个人信息查询ToolStripMenuItem, Me.图书类别管理ToolStripMenuItem, Me.图书借还管理ToolStripMenuItem, Me.帮助ToolStripMenuItem})
+        Me.MenuStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.个人信息查询ToolStripMenuItem, Me.图书类别管理ToolStripMenuItem, Me.帮助ToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1454, 27)
@@ -262,32 +262,6 @@ Partial Class User_Index
         Me.图书类别查询ToolStripMenuItem1.Size = New System.Drawing.Size(198, 24)
         Me.图书类别查询ToolStripMenuItem1.Text = "图书类别查询"
         '
-        '图书借还管理ToolStripMenuItem
-        '
-        Me.图书借还管理ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.借出登记ToolStripMenuItem, Me.借出查询ToolStripMenuItem, Me.还书管理ToolStripMenuItem})
-        Me.图书借还管理ToolStripMenuItem.Font = New System.Drawing.Font("隶书", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.图书借还管理ToolStripMenuItem.Name = "图书借还管理ToolStripMenuItem"
-        Me.图书借还管理ToolStripMenuItem.Size = New System.Drawing.Size(141, 23)
-        Me.图书借还管理ToolStripMenuItem.Text = "图书借还管理"
-        '
-        '借出登记ToolStripMenuItem
-        '
-        Me.借出登记ToolStripMenuItem.Name = "借出登记ToolStripMenuItem"
-        Me.借出登记ToolStripMenuItem.Size = New System.Drawing.Size(158, 24)
-        Me.借出登记ToolStripMenuItem.Text = "借出登记"
-        '
-        '借出查询ToolStripMenuItem
-        '
-        Me.借出查询ToolStripMenuItem.Name = "借出查询ToolStripMenuItem"
-        Me.借出查询ToolStripMenuItem.Size = New System.Drawing.Size(158, 24)
-        Me.借出查询ToolStripMenuItem.Text = "借出查询"
-        '
-        '还书管理ToolStripMenuItem
-        '
-        Me.还书管理ToolStripMenuItem.Name = "还书管理ToolStripMenuItem"
-        Me.还书管理ToolStripMenuItem.Size = New System.Drawing.Size(158, 24)
-        Me.还书管理ToolStripMenuItem.Text = "还书管理"
-        '
         '帮助ToolStripMenuItem
         '
         Me.帮助ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.说明ToolStripMenuItem, Me.退出系统ToolStripMenuItem, Me.帮助ToolStripMenuItem1})
@@ -314,12 +288,36 @@ Partial Class User_Index
         Me.帮助ToolStripMenuItem1.Size = New System.Drawing.Size(158, 24)
         Me.帮助ToolStripMenuItem1.Text = "帮助"
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.White
+        Me.Label6.Font = New System.Drawing.Font("隶书", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label6.Location = New System.Drawing.Point(1350, 32)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(69, 20)
+        Me.Label6.TabIndex = 44
+        Me.Label6.Text = "用户名"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.White
+        Me.Label7.Font = New System.Drawing.Font("隶书", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label7.Location = New System.Drawing.Point(1235, 32)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(109, 20)
+        Me.Label7.TabIndex = 45
+        Me.Label7.Text = "当前账号："
+        '
         'User_Index
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(1454, 752)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.Label4)
@@ -367,14 +365,12 @@ Partial Class User_Index
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents 图书类别管理ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents 图书类别查询ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents 图书借还管理ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents 借出登记ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents 借出查询ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents 还书管理ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents 帮助ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents 说明ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents 退出系统ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents 帮助ToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents 个人信息查询ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents 图书类别查询ToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Label7 As System.Windows.Forms.Label
 End Class

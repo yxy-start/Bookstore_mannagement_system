@@ -1,5 +1,11 @@
 ﻿Public Class User_Index
 
+    Private user As User
+    Public Sub New(u As User)
+        InitializeComponent()
+        user = u
+    End Sub
+    
     Private Sub User_Index_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         TreeView1.BeginUpdate()
         TreeView1.Nodes.Add("江江书店图书类别导航")
@@ -32,8 +38,91 @@
         For Each node In TreeView1.Nodes
             node.ExpandAll()
         Next
+
+        Label6.Text = user.Get_用户名()
+       
     End Sub
 
+    Private Sub TreeView1_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles TreeView1.AfterSelect
+        Dim book As New Book()
+        If TreeView1.SelectedNode.Text = "中国哲学" Then
+            book.Set_bookGenres("中国哲学")
+            Dim bookTable As New BookTable(book)
+            bookTable.ShowDialog()
+        End If
+        If TreeView1.SelectedNode.Text = "宗教理论" Then
+            book.Set_bookGenres("宗教理论")
+            Dim bookTable As New BookTable(book)
+            bookTable.ShowDialog()
+        End If
+        If TreeView1.SelectedNode.Text = "科学技术哲学" Then
+            book.Set_bookGenres("科学技术哲学")
+            Dim bookTable As New BookTable(book)
+            bookTable.ShowDialog()
+        End If
+        If TreeView1.SelectedNode.Text = "中国政治" Then
+            book.Set_bookGenres("中国政治")
+            Dim bookTable As New BookTable(book)
+            bookTable.ShowDialog()
+        End If
+        If TreeView1.SelectedNode.Text = "中国军事" Then
+            book.Set_bookGenres("中国军事")
+            Dim bookTable As New BookTable(book)
+            bookTable.ShowDialog()
+        End If
+        If TreeView1.SelectedNode.Text = "社会科学总论" Then
+            book.Set_bookGenres("社会科学总论")
+            Dim bookTable As New BookTable(book)
+            bookTable.ShowDialog()
+        End If
+        If TreeView1.SelectedNode.Text = "语言文字" Then
+            book.Set_bookGenres("语言文字")
+            Dim bookTable As New BookTable(book)
+            bookTable.ShowDialog()
+        End If
+        If TreeView1.SelectedNode.Text = "成功" Then
+            book.Set_bookGenres("成功")
+            Dim bookTable As New BookTable(book)
+            bookTable.ShowDialog()
+        End If
+        If TreeView1.SelectedNode.Text = "人际沟通" Then
+            book.Set_bookGenres("人际沟通")
+            Dim bookTable As New BookTable(book)
+            bookTable.ShowDialog()
+        End If
+        If TreeView1.SelectedNode.Text = "法学理论" Then
+            book.Set_bookGenres("法学理论")
+            Dim bookTable As New BookTable(book)
+            bookTable.ShowDialog()
+        End If
+        If TreeView1.SelectedNode.Text = "中国现代小说" Then
+            book.Set_bookGenres("中国现代小说")
+            Dim bookTable As New BookTable(book)
+            bookTable.ShowDialog()
+        End If
+        If TreeView1.SelectedNode.Text = "武侠小说" Then
+            book.Set_bookGenres("武侠小说")
+            Dim bookTable As New BookTable(book)
+            bookTable.ShowDialog()
+        End If
+        If TreeView1.SelectedNode.Text = "诗歌" Then
+            book.Set_bookGenres("诗歌")
+            Dim bookTable As New BookTable(book)
+            bookTable.ShowDialog()
+        End If
+        If TreeView1.SelectedNode.Text = "散文" Then
+            book.Set_bookGenres("散文")
+            Dim bookTable As New BookTable(book)
+            bookTable.ShowDialog()
+        End If
+        If TreeView1.SelectedNode.Text = "小说" Then
+            book.Set_bookGenres("小说")
+            Dim bookTable As New BookTable(book)
+            bookTable.ShowDialog()
+        End If
+
+    End Sub
+   
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If Button1.Text = "隐藏引导区" Then
             Button1.Left = 0
@@ -47,34 +136,79 @@
     End Sub
 
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
-        Dim tscx As New Book_User
+        Dim tscx As New Consumer_Book
         tscx.ShowDialog()
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
-        Dim tscx As New Book_User
+        Dim tscx As New Consumer_Book
         tscx.ShowDialog()
     End Sub
 
     Private Sub 图书类别查询ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles 图书类别查询ToolStripMenuItem.Click
-        Dim tscx As New Book_User
+        Dim tscx As New Consumer_Book
         tscx.ShowDialog()
     End Sub
 
     Private Sub 图书类别查询ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles 图书类别查询ToolStripMenuItem1.Click
-        Dim tscx As New Book_User
+        Dim tscx As New Consumer_Book
         tscx.ShowDialog()
     End Sub
 
-    Private Sub TreeView1_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles TreeView1.AfterSelect
-
-    End Sub
-
-    Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
-        Me.Close()
+    Private Sub ToolStripButton3_Click(sender As Object, e As EventArgs) Handles ToolStripButton3.Click
+        Dim tscx As New Consumer_Book
+        tscx.ShowDialog()
     End Sub
 
     Private Sub ToolStripButton2_Click(sender As Object, e As EventArgs) Handles ToolStripButton2.Click
+        Dim tscx As New Consumer_Book
+        tscx.ShowDialog()
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        Consumer_Select(Label6.Text)
+    End Sub
+    Private Sub 个人信息查询ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles 个人信息查询ToolStripMenuItem.Click
+         Consumer_Select(Label6.Text)
+    End Sub
+    Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
+        Consumer_Select(Label6.Text)
+    End Sub
+    Private Sub 说明ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles 说明ToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub 退出系统ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles 退出系统ToolStripMenuItem.Click
+        Dim Cancel As Integer
+        Dim iAnswer As Integer
+        iAnswer = MsgBox("真的要退出吗?", vbYesNo)
+        If iAnswer = vbNo Then
+            Cancel = True
+        Else
+            End
+        End If
+    End Sub
+    Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
+        Dim Cancel As Integer
+        Dim iAnswer As Integer
+        iAnswer = MsgBox("真的要退出吗?", vbYesNo)
+        If iAnswer = vbNo Then
+            Cancel = True
+        Else
+            End
+        End If
+    End Sub
+    Private Sub ToolStripButton4_Click(sender As Object, e As EventArgs) Handles ToolStripButton4.Click
+        Dim Cancel As Integer
+        Dim iAnswer As Integer
+        iAnswer = MsgBox("真的要退出吗?", vbYesNo)
+        If iAnswer = vbNo Then
+            Cancel = True
+        Else
+            End
+        End If
+    End Sub
+    Private Sub 帮助ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles 帮助ToolStripMenuItem1.Click
 
     End Sub
 End Class
