@@ -3,6 +3,7 @@
     Private 用户密码 As String
     Private 性别 As String
     Private 电话号码 As String
+    Private 籍贯 As String
     Private table As String
 
     Public Function Get_用户名()
@@ -34,6 +35,12 @@
 
     Public Sub Set_电话号码(iPhone As String)
         Me.电话号码 = iPhone
+    End Sub
+    Public Function Get_籍贯()
+        Return 籍贯
+    End Function
+    Public Sub Set_籍贯(brithFrom As String)
+        Me.籍贯 = brithFrom
     End Sub
 
     Public Function Get_table()

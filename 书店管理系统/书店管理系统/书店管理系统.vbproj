@@ -61,10 +61,13 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -95,7 +98,9 @@
     </Compile>
     <Compile Include="dao\BookDao.vb" />
     <Compile Include="dao\ManageUserDao.vb" />
+    <Compile Include="service\ManageConsumerService.vb" />
     <Compile Include="service\ManageUserService.vb" />
+    <Compile Include="service\User_BookService.vb" />
     <Compile Include="SQLResources.vb" />
     <Compile Include="dao\UserDao.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -113,60 +118,108 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="service\BookService.vb" />
+    <Compile Include="service\ManageBookService.vb" />
     <Compile Include="service\UserService.vb" />
-    <Compile Include="web\admin\BookManage\Book_User.Designer.vb">
-      <DependentUpon>Book_User.vb</DependentUpon>
+    <Compile Include="web\BookTable.Designer.vb">
+      <DependentUpon>BookTable.vb</DependentUpon>
     </Compile>
-    <Compile Include="web\admin\BookManage\Book_User.vb">
+    <Compile Include="web\BookTable.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="web\admin\UserManage\Manage_User.Designer.vb">
+    <Compile Include="web\Consumer_Book.Designer.vb">
+      <DependentUpon>Consumer_Book.vb</DependentUpon>
+    </Compile>
+    <Compile Include="web\Consumer_Book.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="web\Consumer.Designer.vb">
+      <DependentUpon>Consumer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="web\Consumer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="web\Consumer_Update.Designer.vb">
+      <DependentUpon>Consumer_Update.vb</DependentUpon>
+    </Compile>
+    <Compile Include="web\Consumer_Update.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="web\Manage_Book_Add.Designer.vb">
+      <DependentUpon>Manage_Book_Add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="web\Manage_Book_Add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="web\Manage_Book_Update.Designer.vb">
+      <DependentUpon>Manage_Book_Update.vb</DependentUpon>
+    </Compile>
+    <Compile Include="web\Manage_Book_Update.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="web\Manage_Consumer_Update.Designer.vb">
+      <DependentUpon>Manage_Consumer_Update.vb</DependentUpon>
+    </Compile>
+    <Compile Include="web\Manage_Consumer_Update.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="web\Manage_User.Designer.vb">
       <DependentUpon>Manage_User.vb</DependentUpon>
     </Compile>
-    <Compile Include="web\admin\UserManage\Manage_User.vb">
+    <Compile Include="web\Manage_User.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="web\login\UserRegister.Designer.vb">
+    <Compile Include="web\StatisticsUser.Designer.vb">
+      <DependentUpon>StatisticsUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="web\StatisticsUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="web\StatisticsBook.Designer.vb">
+      <DependentUpon>StatisticsBook.vb</DependentUpon>
+    </Compile>
+    <Compile Include="web\StatisticsBook.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="web\UserRegister.Designer.vb">
       <DependentUpon>UserRegister.vb</DependentUpon>
     </Compile>
-    <Compile Include="web\login\UserRegister.vb">
+    <Compile Include="web\UserRegister.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="web\user\User_Index.Designer.vb">
+    <Compile Include="web\User_Index.Designer.vb">
       <DependentUpon>User_Index.vb</DependentUpon>
     </Compile>
-    <Compile Include="web\user\User_Index.vb">
+    <Compile Include="web\User_Index.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="web\admin\User_System_Index.Designer.vb">
+    <Compile Include="web\User_System_Index.Designer.vb">
       <DependentUpon>User_System_Index.vb</DependentUpon>
     </Compile>
-    <Compile Include="web\admin\User_System_Index.vb">
+    <Compile Include="web\User_System_Index.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="web\login\UserLogin.Designer.vb">
+    <Compile Include="web\UserLogin.Designer.vb">
       <DependentUpon>UserLogin.vb</DependentUpon>
     </Compile>
-    <Compile Include="web\login\UserLogin.vb">
+    <Compile Include="web\UserLogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="web\login\UserUpdate.Designer.vb">
+    <Compile Include="web\UserUpdate.Designer.vb">
       <DependentUpon>UserUpdate.vb</DependentUpon>
     </Compile>
-    <Compile Include="web\login\UserUpdate.vb">
+    <Compile Include="web\UserUpdate.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="web\admin\BookManage\Book_System.Designer.vb">
-      <DependentUpon>Book_System.vb</DependentUpon>
+    <Compile Include="web\Manage_Book.Designer.vb">
+      <DependentUpon>Manage_Book.vb</DependentUpon>
     </Compile>
-    <Compile Include="web\admin\BookManage\Book_System.vb">
+    <Compile Include="web\Manage_Book.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="web\user\UserQuery.Designer.vb">
-      <DependentUpon>UserQuery.vb</DependentUpon>
+    <Compile Include="web\Manage_Consumer.Designer.vb">
+      <DependentUpon>Manage_Consumer.vb</DependentUpon>
     </Compile>
-    <Compile Include="web\user\UserQuery.vb">
+    <Compile Include="web\Manage_Consumer.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -177,32 +230,57 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="web\admin\BookManage\Book_User.resx">
-      <DependentUpon>Book_User.vb</DependentUpon>
+    <EmbeddedResource Include="web\BookTable.resx">
+      <DependentUpon>BookTable.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="web\admin\UserManage\Manage_User.resx">
+    <EmbeddedResource Include="web\Consumer_Book.resx">
+      <DependentUpon>Consumer_Book.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="web\Consumer.resx">
+      <DependentUpon>Consumer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="web\Consumer_Update.resx">
+      <DependentUpon>Consumer_Update.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="web\Manage_Book_Add.resx">
+      <DependentUpon>Manage_Book_Add.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="web\Manage_Book_Update.resx">
+      <DependentUpon>Manage_Book_Update.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="web\Manage_Consumer_Update.resx">
+      <DependentUpon>Manage_Consumer_Update.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="web\Manage_User.resx">
       <DependentUpon>Manage_User.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="web\login\UserRegister.resx">
+    <EmbeddedResource Include="web\Report2.rdlc" />
+    <EmbeddedResource Include="web\StatisticsBook.resx">
+      <DependentUpon>StatisticsBook.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="web\StatisticsUser.resx">
+      <DependentUpon>StatisticsUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="web\UserRegister.resx">
       <DependentUpon>UserRegister.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="web\user\User_Index.resx">
+    <EmbeddedResource Include="web\User_Index.resx">
       <DependentUpon>User_Index.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="web\admin\User_System_Index.resx">
+    <EmbeddedResource Include="web\User_System_Index.resx">
       <DependentUpon>User_System_Index.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="web\login\UserLogin.resx">
+    <EmbeddedResource Include="web\UserLogin.resx">
       <DependentUpon>UserLogin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="web\login\UserUpdate.resx">
+    <EmbeddedResource Include="web\UserUpdate.resx">
       <DependentUpon>UserUpdate.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="web\admin\BookManage\Book_System.resx">
-      <DependentUpon>Book_System.vb</DependentUpon>
+    <EmbeddedResource Include="web\Manage_Book.resx">
+      <DependentUpon>Manage_Book.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="web\user\UserQuery.resx">
-      <DependentUpon>UserQuery.vb</DependentUpon>
+    <EmbeddedResource Include="web\Manage_Consumer.resx">
+      <DependentUpon>Manage_Consumer.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -226,7 +304,9 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">

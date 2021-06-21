@@ -6,10 +6,8 @@ Module BookDao
     Dim conn As String = sqlconn()
     Dim conn2 As String = sqlconn2()
 
-
     Public Function SelectBookname(book As Book)
         Dim f As Integer
-        Dim book1 As New Book_System
         Try
             Dim objconn As New SqlConnection(conn2)
             Dim strsql As String = "select count(*) from Book where bookName = '" & book.Get_bookName() & "'"
@@ -19,28 +17,8 @@ Module BookDao
             objconn.Close()
             objcmd.Dispose()
         Catch ex As Exception
-
         End Try
         If (f > 0) Then
-            Dim sqlConnection As New SqlConnection(conn2)
-            sqlConnection.Open()
-            Dim strsql As String = "select * from Book where bookName = '" & book.Get_bookName() & "'"
-            Dim da As New SqlDataAdapter(strsql, sqlConnection)
-            sqlConnection.Close()
-            Dim objdataSet As New DataSet
-            da.Fill(objdataSet, "book")
-            da.Dispose()
-            book1.DataGridView1.DataSource = objdataSet.Tables("book")
-
-            'objconn.Open()
-            'objAdap = New OleDbDataAdapter(strsql1, objconn)
-            'objdataSet.Reset()                                  '清除数据集
-            'objAdap.Fill(objdataSet, "book")                    '第二个参数就是给这个虚拟表起个名字
-            'book.DataGridView1.DataSource = objset1.Tables("book")
-            'book.DataGridView1.AllowUserToAddRows = False 'DataGridView不显示最后空白的行
-            'book.DataGridView1.CurrentCell = book.DataGridView1.Rows(linenum).Cells(0)  '移动游标
-            'dr = objset1.Tables(0).Rows(linenum)
-
             Return 1
         Else
             Return 0
@@ -48,7 +26,6 @@ Module BookDao
 
     End Function
 
-    
     Public Function SelectBookgenres(book As Book)
         Dim f As Integer
         Try
@@ -71,11 +48,9 @@ Module BookDao
 
     Public Function SelectBookauthor(book As Book)
         Dim f As Integer
-        Dim book1 As New Book_System
-
         Try
             Dim objconn As New SqlConnection(conn2)
-            Dim strsql As String = "select count(*) from Book where bookName = '" & book.Get_bookAuthor() & "'"
+            Dim strsql As String = "select count(*) from Book where bookAuthor = '" & book.Get_bookAuthor() & "'"
             objconn.Open()
             Dim objcmd As New SqlCommand(strsql, objconn)
             f = objcmd.ExecuteScalar
@@ -131,7 +106,198 @@ Module BookDao
         Catch ex As Exception
             MsgBox("UpdateBook:" + ex.Message)
         End Try
-
     End Sub
+
+    Public Function SelectBookTable(book As Book)
+        Try
+            Dim sqlConnection As New SqlConnection(conn2)
+            sqlConnection.Open()
+            Dim strsql As String = "select * from Book where bookGenres = '" & book.Get_bookGenres() & "'"
+            Dim da As New SqlDataAdapter(strsql, sqlConnection)
+            sqlConnection.Close()
+            Dim objdataSet As New DataSet
+            da.Fill(objdataSet, "book")
+            Return objdataSet
+        Catch ex As Exception
+            Return 0
+        End Try
+    End Function
+
+    Public Function SelectBooknameTable(book As Book)
+        Try
+            Dim sqlConnection As New SqlConnection(conn2)
+            sqlConnection.Open()
+            Dim strsql As String = "select * from Book where bookName = '" & book.Get_bookName() & "'"
+            Dim da As New SqlDataAdapter(strsql, sqlConnection)
+            sqlConnection.Close()
+            Dim objdataSet As New DataSet
+            da.Fill(objdataSet, "book")
+            Return objdataSet
+        Catch ex As Exception
+            MsgBox("SelectBooknameTable" + ex.Message)
+        End Try
+        Return 0
+    End Function
+
+    Public Function SelectBookgenresTable(book As Book)
+        Try
+            Dim sqlConnection As New SqlConnection(conn2)
+            sqlConnection.Open()
+            Dim strsql As String = "select * from Book where bookGenres = '" & book.Get_bookGenres() & "'"
+            Dim da As New SqlDataAdapter(strsql, sqlConnection)
+            sqlConnection.Close()
+            Dim objdataSet As New DataSet
+            da.Fill(objdataSet, "book")
+            Return objdataSet
+        Catch ex As Exception
+            MsgBox("SelectBookgenresTable" + ex.Message)
+        End Try
+        Return 0
+    End Function
+
+    Public Function SelectBookauthorTable(book As Book)
+        Try
+            Dim sqlConnection As New SqlConnection(conn2)
+            sqlConnection.Open()
+            Dim strsql As String = "select * from Book where bookAuthor = '" & book.Get_bookAuthor() & "'"
+            Dim da As New SqlDataAdapter(strsql, sqlConnection)
+            sqlConnection.Close()
+            Dim objdataSet As New DataSet
+            da.Fill(objdataSet, "book")
+            Return objdataSet
+        Catch ex As Exception
+            MsgBox("SelectBookauthorTable" + ex.Message)
+        End Try
+        Return 0
+    End Function
+
+    Public Function SelectBookAllTable(book As Book)
+        Try
+            Dim sqlConnection As New SqlConnection(conn2)
+            sqlConnection.Open()
+            Dim strsql As String = "select * from Book where bookName = '" & book.Get_bookName() & "' and bookGenres = '" & book.Get_bookGenres() & "' and bookAuthor = '" & book.Get_bookAuthor() & "'"
+            Dim da As New SqlDataAdapter(strsql, sqlConnection)
+            sqlConnection.Close()
+            Dim objdataSet As New DataSet
+            da.Fill(objdataSet, "book")
+            Return objdataSet
+        Catch ex As Exception
+            MsgBox("SelectBookAllTable" + ex.Message)
+        End Try
+        Return 0
+    End Function
+
+    Public Function SelectBookTable1(book As Book)
+        Try
+            Dim sqlConnection As New SqlConnection(conn2)
+            sqlConnection.Open()
+            Dim strsql As String = "select * from Book where bookName = '" & book.Get_bookName() & "' and bookGenres = '" & book.Get_bookGenres() & "'"
+            Dim da As New SqlDataAdapter(strsql, sqlConnection)
+            sqlConnection.Close()
+            Dim objdataSet As New DataSet
+            da.Fill(objdataSet, "book")
+            Return objdataSet
+        Catch ex As Exception
+            MsgBox("SelectBookTable1" + ex.Message)
+        End Try
+        Return 0
+    End Function
+
+    Public Function SelectBookTable2(book As Book)
+        Try
+            Dim sqlConnection As New SqlConnection(conn2)
+            sqlConnection.Open()
+            Dim strsql As String = "select * from Book where bookName = '" & book.Get_bookName() & "' and bookAuthor = '" & book.Get_bookAuthor() & "'"
+            Dim da As New SqlDataAdapter(strsql, sqlConnection)
+            sqlConnection.Close()
+            Dim objdataSet As New DataSet
+            da.Fill(objdataSet, "book")
+            Return objdataSet
+        Catch ex As Exception
+            MsgBox("SelectBookTable2" + ex.Message)
+        End Try
+        Return 0
+    End Function
+
+    Public Function SelectBookTable3(book As Book)
+        Try
+            Dim sqlConnection As New SqlConnection(conn2)
+            sqlConnection.Open()
+            Dim strsql As String = "select * from Book where bookName = '" & book.Get_bookName() & "'"
+            Dim da As New SqlDataAdapter(strsql, sqlConnection)
+            sqlConnection.Close()
+            Dim objdataSet As New DataSet
+            da.Fill(objdataSet, "book")
+            Return objdataSet
+        Catch ex As Exception
+            MsgBox("SelectBookTable3" + ex.Message)
+        End Try
+        Return 0
+    End Function
+
+    Public Function SelectBookTable4(book As Book)
+        Try
+            Dim sqlConnection As New SqlConnection(conn2)
+            sqlConnection.Open()
+            Dim strsql As String = "select * from Book where bookGenres = '" & book.Get_bookGenres() & "' and bookAuthor = '" & book.Get_bookAuthor() & "'"
+            Dim da As New SqlDataAdapter(strsql, sqlConnection)
+            sqlConnection.Close()
+            Dim objdataSet As New DataSet
+            da.Fill(objdataSet, "book")
+            Return objdataSet
+        Catch ex As Exception
+            MsgBox("SelectBookTable4" + ex.Message)
+        End Try
+        Return 0
+    End Function
+
+    Public Function SelectBookTable5(book As Book)
+        Try
+            Dim sqlConnection As New SqlConnection(conn2)
+            sqlConnection.Open()
+            Dim strsql As String = "select * from Book where bookGenres = '" & book.Get_bookGenres() & "'"
+            Dim da As New SqlDataAdapter(strsql, sqlConnection)
+            sqlConnection.Close()
+            Dim objdataSet As New DataSet
+            da.Fill(objdataSet, "book")
+            Return objdataSet
+        Catch ex As Exception
+            MsgBox("SelectBookTable5" + ex.Message)
+        End Try
+        Return 0
+    End Function
+
+    Public Function SelectBookTable6(book As Book)
+        Try
+            Dim sqlConnection As New SqlConnection(conn2)
+            sqlConnection.Open()
+            Dim strsql As String = "select * from Book where bookAuthor = '" & book.Get_bookAuthor() & "'"
+            Dim da As New SqlDataAdapter(strsql, sqlConnection)
+            sqlConnection.Close()
+            Dim objdataSet As New DataSet
+            da.Fill(objdataSet, "book")
+            Return objdataSet
+        Catch ex As Exception
+            MsgBox("SelectBookTable6" + ex.Message)
+        End Try
+        Return 0
+    End Function
+
+    Public Function SelectBookTable7(book As Book)
+        Try
+            Dim sqlConnection As New SqlConnection(conn2)
+            sqlConnection.Open()
+            Dim strsql As String = "select * from Book "
+            Dim da As New SqlDataAdapter(strsql, sqlConnection)
+            sqlConnection.Close()
+            Dim objdataSet As New DataSet
+            da.Fill(objdataSet, "book")
+            Return objdataSet
+        Catch ex As Exception
+            MsgBox("SelectBookTable7" + ex.Message)
+        End Try
+        Return 0
+    End Function
+
 
 End Module

@@ -25,7 +25,7 @@ Option Explicit On
 Partial Public Class BookstoreDataSet
     Inherits Global.System.Data.DataSet
     
-    Private table系统用户表 As 系统用户表DataTable
+    Private tableBook As BookDataTable
     
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
@@ -56,8 +56,8 @@ Partial Public Class BookstoreDataSet
         If (Me.DetermineSchemaSerializationMode(info, context) = Global.System.Data.SchemaSerializationMode.IncludeSchema) Then
             Dim ds As Global.System.Data.DataSet = New Global.System.Data.DataSet()
             ds.ReadXmlSchema(New Global.System.Xml.XmlTextReader(New Global.System.IO.StringReader(strSchema)))
-            If (Not (ds.Tables("系统用户表")) Is Nothing) Then
-                MyBase.Tables.Add(New 系统用户表DataTable(ds.Tables("系统用户表")))
+            If (Not (ds.Tables("Book")) Is Nothing) Then
+                MyBase.Tables.Add(New BookDataTable(ds.Tables("Book")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -80,9 +80,9 @@ Partial Public Class BookstoreDataSet
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
      Global.System.ComponentModel.Browsable(false),  _
      Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
-    Public ReadOnly Property 系统用户表() As 系统用户表DataTable
+    Public ReadOnly Property Book() As BookDataTable
         Get
-            Return Me.table系统用户表
+            Return Me.tableBook
         End Get
     End Property
     
@@ -153,8 +153,8 @@ Partial Public Class BookstoreDataSet
             Me.Reset
             Dim ds As Global.System.Data.DataSet = New Global.System.Data.DataSet()
             ds.ReadXml(reader)
-            If (Not (ds.Tables("系统用户表")) Is Nothing) Then
-                MyBase.Tables.Add(New 系统用户表DataTable(ds.Tables("系统用户表")))
+            If (Not (ds.Tables("Book")) Is Nothing) Then
+                MyBase.Tables.Add(New BookDataTable(ds.Tables("Book")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -188,10 +188,10 @@ Partial Public Class BookstoreDataSet
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Friend Overloads Sub InitVars(ByVal initTable As Boolean)
-        Me.table系统用户表 = CType(MyBase.Tables("系统用户表"),系统用户表DataTable)
+        Me.tableBook = CType(MyBase.Tables("Book"),BookDataTable)
         If (initTable = true) Then
-            If (Not (Me.table系统用户表) Is Nothing) Then
-                Me.table系统用户表.InitVars
+            If (Not (Me.tableBook) Is Nothing) Then
+                Me.tableBook.InitVars
             End If
         End If
     End Sub
@@ -204,13 +204,13 @@ Partial Public Class BookstoreDataSet
         Me.Namespace = "http://tempuri.org/BookstoreDataSet.xsd"
         Me.EnforceConstraints = true
         Me.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
-        Me.table系统用户表 = New 系统用户表DataTable()
-        MyBase.Tables.Add(Me.table系统用户表)
+        Me.tableBook = New BookDataTable()
+        MyBase.Tables.Add(Me.tableBook)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-    Private Function ShouldSerialize系统用户表() As Boolean
+    Private Function ShouldSerializeBook() As Boolean
         Return false
     End Function
     
@@ -273,27 +273,29 @@ Partial Public Class BookstoreDataSet
     End Function
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-    Public Delegate Sub 系统用户表RowChangeEventHandler(ByVal sender As Object, ByVal e As 系统用户表RowChangeEvent)
+    Public Delegate Sub BookRowChangeEventHandler(ByVal sender As Object, ByVal e As BookRowChangeEvent)
     
     '''<summary>
     '''Represents the strongly named DataTable class.
     '''</summary>
     <Global.System.Serializable(),  _
      Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
-    Partial Public Class 系统用户表DataTable
-        Inherits Global.System.Data.TypedTableBase(Of 系统用户表Row)
+    Partial Public Class BookDataTable
+        Inherits Global.System.Data.TypedTableBase(Of BookRow)
         
-        Private column用户名 As Global.System.Data.DataColumn
+        Private columnbookName As Global.System.Data.DataColumn
         
-        Private column性别 As Global.System.Data.DataColumn
+        Private columnbookGenres As Global.System.Data.DataColumn
         
-        Private column电话 As Global.System.Data.DataColumn
+        Private columnbookAuthor As Global.System.Data.DataColumn
+        
+        Private columnbookPrice As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
             MyBase.New
-            Me.TableName = "系统用户表"
+            Me.TableName = "Book"
             Me.BeginInit
             Me.InitClass
             Me.EndInit
@@ -326,25 +328,33 @@ Partial Public Class BookstoreDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property 用户名Column() As Global.System.Data.DataColumn
+        Public ReadOnly Property bookNameColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.column用户名
+                Return Me.columnbookName
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property 性别Column() As Global.System.Data.DataColumn
+        Public ReadOnly Property bookGenresColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.column性别
+                Return Me.columnbookGenres
             End Get
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property 电话Column() As Global.System.Data.DataColumn
+        Public ReadOnly Property bookAuthorColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.column电话
+                Return Me.columnbookAuthor
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property bookPriceColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnbookPrice
             End Get
         End Property
         
@@ -359,50 +369,44 @@ Partial Public Class BookstoreDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Default ReadOnly Property Item(ByVal index As Integer) As 系统用户表Row
+        Public Default ReadOnly Property Item(ByVal index As Integer) As BookRow
             Get
-                Return CType(Me.Rows(index),系统用户表Row)
+                Return CType(Me.Rows(index),BookRow)
             End Get
         End Property
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event 系统用户表RowChanging As 系统用户表RowChangeEventHandler
+        Public Event BookRowChanging As BookRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event 系统用户表RowChanged As 系统用户表RowChangeEventHandler
+        Public Event BookRowChanged As BookRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event 系统用户表RowDeleting As 系统用户表RowChangeEventHandler
+        Public Event BookRowDeleting As BookRowChangeEventHandler
         
         <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event 系统用户表RowDeleted As 系统用户表RowChangeEventHandler
+        Public Event BookRowDeleted As BookRowChangeEventHandler
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Sub Add系统用户表Row(ByVal row As 系统用户表Row)
+        Public Overloads Sub AddBookRow(ByVal row As BookRow)
             Me.Rows.Add(row)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function Add系统用户表Row(ByVal 用户名 As String, ByVal 性别 As String, ByVal 电话 As String) As 系统用户表Row
-            Dim row系统用户表Row As 系统用户表Row = CType(Me.NewRow,系统用户表Row)
-            Dim columnValuesArray() As Object = New Object() {用户名, 性别, 电话}
-            row系统用户表Row.ItemArray = columnValuesArray
-            Me.Rows.Add(row系统用户表Row)
-            Return row系统用户表Row
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function FindBy用户名(ByVal 用户名 As String) As 系统用户表Row
-            Return CType(Me.Rows.Find(New Object() {用户名}),系统用户表Row)
+        Public Overloads Function AddBookRow(ByVal bookName As String, ByVal bookGenres As String, ByVal bookAuthor As String, ByVal bookPrice As Byte) As BookRow
+            Dim rowBookRow As BookRow = CType(Me.NewRow,BookRow)
+            Dim columnValuesArray() As Object = New Object() {bookName, bookGenres, bookAuthor, bookPrice}
+            rowBookRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowBookRow)
+            Return rowBookRow
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Overrides Function Clone() As Global.System.Data.DataTable
-            Dim cln As 系统用户表DataTable = CType(MyBase.Clone,系统用户表DataTable)
+            Dim cln As BookDataTable = CType(MyBase.Clone,BookDataTable)
             cln.InitVars
             Return cln
         End Function
@@ -410,58 +414,61 @@ Partial Public Class BookstoreDataSet
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
-            Return New 系统用户表DataTable()
+            Return New BookDataTable()
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Friend Sub InitVars()
-            Me.column用户名 = MyBase.Columns("用户名")
-            Me.column性别 = MyBase.Columns("性别")
-            Me.column电话 = MyBase.Columns("电话")
+            Me.columnbookName = MyBase.Columns("bookName")
+            Me.columnbookGenres = MyBase.Columns("bookGenres")
+            Me.columnbookAuthor = MyBase.Columns("bookAuthor")
+            Me.columnbookPrice = MyBase.Columns("bookPrice")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitClass()
-            Me.column用户名 = New Global.System.Data.DataColumn("用户名", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.column用户名)
-            Me.column性别 = New Global.System.Data.DataColumn("性别", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.column性别)
-            Me.column电话 = New Global.System.Data.DataColumn("电话", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.column电话)
-            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.column用户名}, true))
-            Me.column用户名.AllowDBNull = false
-            Me.column用户名.Unique = true
-            Me.column用户名.MaxLength = 20
-            Me.column性别.MaxLength = 10
-            Me.column电话.MaxLength = 15
+            Me.columnbookName = New Global.System.Data.DataColumn("bookName", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnbookName)
+            Me.columnbookGenres = New Global.System.Data.DataColumn("bookGenres", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnbookGenres)
+            Me.columnbookAuthor = New Global.System.Data.DataColumn("bookAuthor", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnbookAuthor)
+            Me.columnbookPrice = New Global.System.Data.DataColumn("bookPrice", GetType(Byte), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnbookPrice)
+            Me.columnbookName.AllowDBNull = false
+            Me.columnbookName.MaxLength = 50
+            Me.columnbookGenres.AllowDBNull = false
+            Me.columnbookGenres.MaxLength = 20
+            Me.columnbookAuthor.AllowDBNull = false
+            Me.columnbookAuthor.MaxLength = 20
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function New系统用户表Row() As 系统用户表Row
-            Return CType(Me.NewRow,系统用户表Row)
+        Public Function NewBookRow() As BookRow
+            Return CType(Me.NewRow,BookRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
-            Return New 系统用户表Row(builder)
+            Return New BookRow(builder)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Function GetRowType() As Global.System.Type
-            Return GetType(系统用户表Row)
+            Return GetType(BookRow)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanged(e)
-            If (Not (Me.系统用户表RowChangedEvent) Is Nothing) Then
-                RaiseEvent 系统用户表RowChanged(Me, New 系统用户表RowChangeEvent(CType(e.Row,系统用户表Row), e.Action))
+            If (Not (Me.BookRowChangedEvent) Is Nothing) Then
+                RaiseEvent BookRowChanged(Me, New BookRowChangeEvent(CType(e.Row,BookRow), e.Action))
             End If
         End Sub
         
@@ -469,8 +476,8 @@ Partial Public Class BookstoreDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowChanging(e)
-            If (Not (Me.系统用户表RowChangingEvent) Is Nothing) Then
-                RaiseEvent 系统用户表RowChanging(Me, New 系统用户表RowChangeEvent(CType(e.Row,系统用户表Row), e.Action))
+            If (Not (Me.BookRowChangingEvent) Is Nothing) Then
+                RaiseEvent BookRowChanging(Me, New BookRowChangeEvent(CType(e.Row,BookRow), e.Action))
             End If
         End Sub
         
@@ -478,8 +485,8 @@ Partial Public Class BookstoreDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleted(e)
-            If (Not (Me.系统用户表RowDeletedEvent) Is Nothing) Then
-                RaiseEvent 系统用户表RowDeleted(Me, New 系统用户表RowChangeEvent(CType(e.Row,系统用户表Row), e.Action))
+            If (Not (Me.BookRowDeletedEvent) Is Nothing) Then
+                RaiseEvent BookRowDeleted(Me, New BookRowChangeEvent(CType(e.Row,BookRow), e.Action))
             End If
         End Sub
         
@@ -487,14 +494,14 @@ Partial Public Class BookstoreDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
             MyBase.OnRowDeleting(e)
-            If (Not (Me.系统用户表RowDeletingEvent) Is Nothing) Then
-                RaiseEvent 系统用户表RowDeleting(Me, New 系统用户表RowChangeEvent(CType(e.Row,系统用户表Row), e.Action))
+            If (Not (Me.BookRowDeletingEvent) Is Nothing) Then
+                RaiseEvent BookRowDeleting(Me, New BookRowChangeEvent(CType(e.Row,BookRow), e.Action))
             End If
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub Remove系统用户表Row(ByVal row As 系统用户表Row)
+        Public Sub RemoveBookRow(ByVal row As BookRow)
             Me.Rows.Remove(row)
         End Sub
         
@@ -521,7 +528,7 @@ Partial Public Class BookstoreDataSet
             type.Attributes.Add(attribute1)
             Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
             attribute2.Name = "tableTypeName"
-            attribute2.FixedValue = "系统用户表DataTable"
+            attribute2.FixedValue = "BookDataTable"
             type.Attributes.Add(attribute2)
             type.Particle = sequence
             Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
@@ -568,81 +575,76 @@ Partial Public Class BookstoreDataSet
     '''<summary>
     '''Represents strongly named DataRow class.
     '''</summary>
-    Partial Public Class 系统用户表Row
+    Partial Public Class BookRow
         Inherits Global.System.Data.DataRow
         
-        Private table系统用户表 As 系统用户表DataTable
+        Private tableBook As BookDataTable
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
             MyBase.New(rb)
-            Me.table系统用户表 = CType(Me.Table,系统用户表DataTable)
+            Me.tableBook = CType(Me.Table,BookDataTable)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property 用户名() As String
+        Public Property bookName() As String
             Get
-                Return CType(Me(Me.table系统用户表.用户名Column),String)
+                Return CType(Me(Me.tableBook.bookNameColumn),String)
             End Get
             Set
-                Me(Me.table系统用户表.用户名Column) = value
+                Me(Me.tableBook.bookNameColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property 性别() As String
+        Public Property bookGenres() As String
+            Get
+                Return CType(Me(Me.tableBook.bookGenresColumn),String)
+            End Get
+            Set
+                Me(Me.tableBook.bookGenresColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property bookAuthor() As String
+            Get
+                Return CType(Me(Me.tableBook.bookAuthorColumn),String)
+            End Get
+            Set
+                Me(Me.tableBook.bookAuthorColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property bookPrice() As Byte
             Get
                 Try 
-                    Return CType(Me(Me.table系统用户表.性别Column),String)
+                    Return CType(Me(Me.tableBook.bookPriceColumn),Byte)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("表““系统用户表””中列““性别””的值为 DBNull。", e)
+                    Throw New Global.System.Data.StrongTypingException("表““Book””中列““bookPrice””的值为 DBNull。", e)
                 End Try
             End Get
             Set
-                Me(Me.table系统用户表.性别Column) = value
+                Me(Me.tableBook.bookPriceColumn) = value
             End Set
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property 电话() As String
-            Get
-                Try 
-                    Return CType(Me(Me.table系统用户表.电话Column),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("表““系统用户表””中列““电话””的值为 DBNull。", e)
-                End Try
-            End Get
-            Set
-                Me(Me.table系统用户表.电话Column) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function Is性别Null() As Boolean
-            Return Me.IsNull(Me.table系统用户表.性别Column)
+        Public Function IsbookPriceNull() As Boolean
+            Return Me.IsNull(Me.tableBook.bookPriceColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub Set性别Null()
-            Me(Me.table系统用户表.性别Column) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function Is电话Null() As Boolean
-            Return Me.IsNull(Me.table系统用户表.电话Column)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub Set电话Null()
-            Me(Me.table系统用户表.电话Column) = Global.System.Convert.DBNull
+        Public Sub SetbookPriceNull()
+            Me(Me.tableBook.bookPriceColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -650,16 +652,16 @@ Partial Public Class BookstoreDataSet
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-    Public Class 系统用户表RowChangeEvent
+    Public Class BookRowChangeEvent
         Inherits Global.System.EventArgs
         
-        Private eventRow As 系统用户表Row
+        Private eventRow As BookRow
         
         Private eventAction As Global.System.Data.DataRowAction
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub New(ByVal row As 系统用户表Row, ByVal action As Global.System.Data.DataRowAction)
+        Public Sub New(ByVal row As BookRow, ByVal action As Global.System.Data.DataRowAction)
             MyBase.New
             Me.eventRow = row
             Me.eventAction = action
@@ -667,7 +669,7 @@ Partial Public Class BookstoreDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property Row() As 系统用户表Row
+        Public ReadOnly Property Row() As BookRow
             Get
                 Return Me.eventRow
             End Get
@@ -694,7 +696,7 @@ Namespace BookstoreDataSetTableAdapters
      Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
      Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-    Partial Public Class 系统用户表TableAdapter
+    Partial Public Class BookTableAdapter
         Inherits Global.System.ComponentModel.Component
         
         Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
@@ -811,37 +813,21 @@ Namespace BookstoreDataSetTableAdapters
             Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
             Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
             tableMapping.SourceTable = "Table"
-            tableMapping.DataSetTable = "系统用户表"
-            tableMapping.ColumnMappings.Add("用户名", "用户名")
-            tableMapping.ColumnMappings.Add("性别", "性别")
-            tableMapping.ColumnMappings.Add("电话", "电话")
+            tableMapping.DataSetTable = "Book"
+            tableMapping.ColumnMappings.Add("bookName", "bookName")
+            tableMapping.ColumnMappings.Add("bookGenres", "bookGenres")
+            tableMapping.ColumnMappings.Add("bookAuthor", "bookAuthor")
+            tableMapping.ColumnMappings.Add("bookPrice", "bookPrice")
             Me._adapter.TableMappings.Add(tableMapping)
-            Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
-            Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[系统用户表] WHERE (([用户名] = @Original_用户名) AND ((@IsNull_性别 = 1 AND"& _ 
-                " [性别] IS NULL) OR ([性别] = @Original_性别)) AND ((@IsNull_电话 = 1 AND [电话] IS NULL) "& _ 
-                "OR ([电话] = @Original_电话)))"
-            Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_用户名", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "用户名", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_性别", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "性别", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_性别", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "性别", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_电话", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "电话", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_电话", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "电话", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
-            Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[系统用户表] SET [用户名] = @用户名, [性别] = @性别, [电话] = @电话 WHERE (([用户名] = @Or"& _ 
-                "iginal_用户名) AND ((@IsNull_性别 = 1 AND [性别] IS NULL) OR ([性别] = @Original_性别)) AND"& _ 
-                " ((@IsNull_电话 = 1 AND [电话] IS NULL) OR ([电话] = @Original_电话)));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT 用户名, 性别,"& _ 
-                " 电话 FROM 系统用户表 WHERE (用户名 = @用户名)"
-            Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@用户名", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "用户名", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@性别", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "性别", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@电话", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "电话", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_用户名", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "用户名", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_性别", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "性别", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_性别", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "性别", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@IsNull_电话", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "电话", Global.System.Data.DataRowVersion.Original, true, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_电话", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "电话", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
+            Me._adapter.InsertCommand.Connection = Me.Connection
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Book] ([bookName], [bookGenres], [bookAuthor], [bookPrice]) VA"& _ 
+                "LUES (@bookName, @bookGenres, @bookAuthor, @bookPrice)"
+            Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@bookName", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "bookName", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@bookGenres", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "bookGenres", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@bookAuthor", Global.System.Data.SqlDbType.[Char], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "bookAuthor", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@bookPrice", Global.System.Data.SqlDbType.TinyInt, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "bookPrice", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -857,7 +843,7 @@ Namespace BookstoreDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT 用户名, 性别, 电话 FROM dbo.系统用户表"
+            Me._commandCollection(0).CommandText = "SELECT bookName, bookGenres, bookAuthor, bookPrice FROM dbo.Book"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -865,7 +851,7 @@ Namespace BookstoreDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As BookstoreDataSet.系统用户表DataTable) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As BookstoreDataSet.BookDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -878,9 +864,9 @@ Namespace BookstoreDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As BookstoreDataSet.系统用户表DataTable
+        Public Overloads Overridable Function GetData() As BookstoreDataSet.BookDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As BookstoreDataSet.系统用户表DataTable = New BookstoreDataSet.系统用户表DataTable()
+            Dim dataTable As BookstoreDataSet.BookDataTable = New BookstoreDataSet.BookDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -888,7 +874,7 @@ Namespace BookstoreDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-        Public Overloads Overridable Function Update(ByVal dataTable As BookstoreDataSet.系统用户表DataTable) As Integer
+        Public Overloads Overridable Function Update(ByVal dataTable As BookstoreDataSet.BookDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
         
@@ -896,7 +882,7 @@ Namespace BookstoreDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
         Public Overloads Overridable Function Update(ByVal dataSet As BookstoreDataSet) As Integer
-            Return Me.Adapter.Update(dataSet, "系统用户表")
+            Return Me.Adapter.Update(dataSet, "Book")
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -916,102 +902,41 @@ Namespace BookstoreDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_用户名 As String, ByVal Original_性别 As String, ByVal Original_电话 As String) As Integer
-            If (Original_用户名 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_用户名")
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
+        Public Overloads Overridable Function Insert(ByVal bookName As String, ByVal bookGenres As String, ByVal bookAuthor As String, ByVal bookPrice As Global.System.Nullable(Of Byte)) As Integer
+            If (bookName Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("bookName")
             Else
-                Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_用户名,String)
+                Me.Adapter.InsertCommand.Parameters(0).Value = CType(bookName,String)
             End If
-            If (Original_性别 Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
+            If (bookGenres Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("bookGenres")
             Else
-                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_性别,String)
+                Me.Adapter.InsertCommand.Parameters(1).Value = CType(bookGenres,String)
             End If
-            If (Original_电话 Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(1,Object)
-                Me.Adapter.DeleteCommand.Parameters(4).Value = Global.System.DBNull.Value
+            If (bookAuthor Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("bookAuthor")
             Else
-                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_电话,String)
+                Me.Adapter.InsertCommand.Parameters(2).Value = CType(bookAuthor,String)
             End If
-            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
-            If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
+            If (bookPrice.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(3).Value = CType(bookPrice.Value,Byte)
+            Else
+                Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
+            If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
-                Me.Adapter.DeleteCommand.Connection.Open
+                Me.Adapter.InsertCommand.Connection.Open
             End If
             Try 
-                Dim returnValue As Integer = Me.Adapter.DeleteCommand.ExecuteNonQuery
+                Dim returnValue As Integer = Me.Adapter.InsertCommand.ExecuteNonQuery
                 Return returnValue
             Finally
                 If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    Me.Adapter.DeleteCommand.Connection.Close
+                    Me.Adapter.InsertCommand.Connection.Close
                 End If
             End Try
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal 用户名 As String, ByVal 性别 As String, ByVal 电话 As String, ByVal Original_用户名 As String, ByVal Original_性别 As String, ByVal Original_电话 As String) As Integer
-            If (用户名 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("用户名")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(用户名,String)
-            End If
-            If (性别 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(性别,String)
-            End If
-            If (电话 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(电话,String)
-            End If
-            If (Original_用户名 Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_用户名")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Original_用户名,String)
-            End If
-            If (Original_性别 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Original_性别,String)
-            End If
-            If (Original_电话 Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
-            Else
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_电话,String)
-            End If
-            Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
-            If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
-                        <> Global.System.Data.ConnectionState.Open) Then
-                Me.Adapter.UpdateCommand.Connection.Open
-            End If
-            Try 
-                Dim returnValue As Integer = Me.Adapter.UpdateCommand.ExecuteNonQuery
-                Return returnValue
-            Finally
-                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    Me.Adapter.UpdateCommand.Connection.Close
-                End If
-            End Try
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal 性别 As String, ByVal 电话 As String, ByVal Original_用户名 As String, ByVal Original_性别 As String, ByVal Original_电话 As String) As Integer
-            Return Me.Update(Original_用户名, 性别, 电话, Original_用户名, Original_性别, Original_电话)
         End Function
     End Class
     
@@ -1028,7 +953,7 @@ Namespace BookstoreDataSetTableAdapters
         
         Private _updateOrder As UpdateOrderOption
         
-        Private _系统用户表TableAdapter As 系统用户表TableAdapter
+        Private _bookTableAdapter As BookTableAdapter
         
         Private _backupDataSetBeforeUpdate As Boolean
         
@@ -1050,12 +975,12 @@ Namespace BookstoreDataSetTableAdapters
          Global.System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso"& _ 
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3"& _ 
             "a", "System.Drawing.Design.UITypeEditor")>  _
-        Public Property 系统用户表TableAdapter() As 系统用户表TableAdapter
+        Public Property BookTableAdapter() As BookTableAdapter
             Get
-                Return Me._系统用户表TableAdapter
+                Return Me._bookTableAdapter
             End Get
             Set
-                Me._系统用户表TableAdapter = value
+                Me._bookTableAdapter = value
             End Set
         End Property
         
@@ -1078,9 +1003,9 @@ Namespace BookstoreDataSetTableAdapters
                 If (Not (Me._connection) Is Nothing) Then
                     Return Me._connection
                 End If
-                If ((Not (Me._系统用户表TableAdapter) Is Nothing)  _
-                            AndAlso (Not (Me._系统用户表TableAdapter.Connection) Is Nothing)) Then
-                    Return Me._系统用户表TableAdapter.Connection
+                If ((Not (Me._bookTableAdapter) Is Nothing)  _
+                            AndAlso (Not (Me._bookTableAdapter.Connection) Is Nothing)) Then
+                    Return Me._bookTableAdapter.Connection
                 End If
                 Return Nothing
             End Get
@@ -1095,7 +1020,7 @@ Namespace BookstoreDataSetTableAdapters
         Public ReadOnly Property TableAdapterInstanceCount() As Integer
             Get
                 Dim count As Integer = 0
-                If (Not (Me._系统用户表TableAdapter) Is Nothing) Then
+                If (Not (Me._bookTableAdapter) Is Nothing) Then
                     count = (count + 1)
                 End If
                 Return count
@@ -1109,12 +1034,12 @@ Namespace BookstoreDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Function UpdateUpdatedRows(ByVal dataSet As BookstoreDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow), ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._系统用户表TableAdapter) Is Nothing) Then
-                Dim updatedRows() As Global.System.Data.DataRow = dataSet.系统用户表.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
+            If (Not (Me._bookTableAdapter) Is Nothing) Then
+                Dim updatedRows() As Global.System.Data.DataRow = dataSet.Book.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.ModifiedCurrent)
                 updatedRows = Me.GetRealUpdatedRows(updatedRows, allAddedRows)
                 If ((Not (updatedRows) Is Nothing)  _
                             AndAlso (0 < updatedRows.Length)) Then
-                    result = (result + Me._系统用户表TableAdapter.Update(updatedRows))
+                    result = (result + Me._bookTableAdapter.Update(updatedRows))
                     allChangedRows.AddRange(updatedRows)
                 End If
             End If
@@ -1128,11 +1053,11 @@ Namespace BookstoreDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Function UpdateInsertedRows(ByVal dataSet As BookstoreDataSet, ByVal allAddedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._系统用户表TableAdapter) Is Nothing) Then
-                Dim addedRows() As Global.System.Data.DataRow = dataSet.系统用户表.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
+            If (Not (Me._bookTableAdapter) Is Nothing) Then
+                Dim addedRows() As Global.System.Data.DataRow = dataSet.Book.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Added)
                 If ((Not (addedRows) Is Nothing)  _
                             AndAlso (0 < addedRows.Length)) Then
-                    result = (result + Me._系统用户表TableAdapter.Update(addedRows))
+                    result = (result + Me._bookTableAdapter.Update(addedRows))
                     allAddedRows.AddRange(addedRows)
                 End If
             End If
@@ -1146,11 +1071,11 @@ Namespace BookstoreDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Function UpdateDeletedRows(ByVal dataSet As BookstoreDataSet, ByVal allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)) As Integer
             Dim result As Integer = 0
-            If (Not (Me._系统用户表TableAdapter) Is Nothing) Then
-                Dim deletedRows() As Global.System.Data.DataRow = dataSet.系统用户表.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
+            If (Not (Me._bookTableAdapter) Is Nothing) Then
+                Dim deletedRows() As Global.System.Data.DataRow = dataSet.Book.Select(Nothing, Nothing, Global.System.Data.DataViewRowState.Deleted)
                 If ((Not (deletedRows) Is Nothing)  _
                             AndAlso (0 < deletedRows.Length)) Then
-                    result = (result + Me._系统用户表TableAdapter.Update(deletedRows))
+                    result = (result + Me._bookTableAdapter.Update(deletedRows))
                     allChangedRows.AddRange(deletedRows)
                 End If
             End If
@@ -1195,8 +1120,8 @@ Namespace BookstoreDataSetTableAdapters
             If (dataSet.HasChanges = false) Then
                 Return 0
             End If
-            If ((Not (Me._系统用户表TableAdapter) Is Nothing)  _
-                        AndAlso (Me.MatchTableAdapterConnection(Me._系统用户表TableAdapter.Connection) = false)) Then
+            If ((Not (Me._bookTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._bookTableAdapter.Connection) = false)) Then
                 Throw New Global.System.ArgumentException("由 TableAdapterManager 管理的所有 TableAdapter 必须使用相同的连接字符串。")
             End If
             Dim workConnection As Global.System.Data.IDbConnection = Me.Connection
@@ -1230,13 +1155,13 @@ Namespace BookstoreDataSetTableAdapters
             Try 
                 '---- Prepare for update -----------
                 '
-                If (Not (Me._系统用户表TableAdapter) Is Nothing) Then
-                    revertConnections.Add(Me._系统用户表TableAdapter, Me._系统用户表TableAdapter.Connection)
-                    Me._系统用户表TableAdapter.Connection = CType(workConnection,Global.System.Data.SqlClient.SqlConnection)
-                    Me._系统用户表TableAdapter.Transaction = CType(workTransaction,Global.System.Data.SqlClient.SqlTransaction)
-                    If Me._系统用户表TableAdapter.Adapter.AcceptChangesDuringUpdate Then
-                        Me._系统用户表TableAdapter.Adapter.AcceptChangesDuringUpdate = false
-                        adaptersWithAcceptChangesDuringUpdate.Add(Me._系统用户表TableAdapter.Adapter)
+                If (Not (Me._bookTableAdapter) Is Nothing) Then
+                    revertConnections.Add(Me._bookTableAdapter, Me._bookTableAdapter.Connection)
+                    Me._bookTableAdapter.Connection = CType(workConnection,Global.System.Data.SqlClient.SqlConnection)
+                    Me._bookTableAdapter.Transaction = CType(workTransaction,Global.System.Data.SqlClient.SqlTransaction)
+                    If Me._bookTableAdapter.Adapter.AcceptChangesDuringUpdate Then
+                        Me._bookTableAdapter.Adapter.AcceptChangesDuringUpdate = false
+                        adaptersWithAcceptChangesDuringUpdate.Add(Me._bookTableAdapter.Adapter)
                     End If
                 End If
                 '
@@ -1299,9 +1224,9 @@ Namespace BookstoreDataSetTableAdapters
                 If workConnOpened Then
                     workConnection.Close
                 End If
-                If (Not (Me._系统用户表TableAdapter) Is Nothing) Then
-                    Me._系统用户表TableAdapter.Connection = CType(revertConnections(Me._系统用户表TableAdapter),Global.System.Data.SqlClient.SqlConnection)
-                    Me._系统用户表TableAdapter.Transaction = Nothing
+                If (Not (Me._bookTableAdapter) Is Nothing) Then
+                    Me._bookTableAdapter.Connection = CType(revertConnections(Me._bookTableAdapter),Global.System.Data.SqlClient.SqlConnection)
+                    Me._bookTableAdapter.Transaction = Nothing
                 End If
                 If (0 < adaptersWithAcceptChangesDuringUpdate.Count) Then
                     Dim adapters((adaptersWithAcceptChangesDuringUpdate.Count) - 1) As Global.System.Data.Common.DataAdapter

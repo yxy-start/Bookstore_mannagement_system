@@ -61,4 +61,20 @@ Module ManageUserDao
 
     End Sub
 
+    Public Function SelectManageTable(manage As ManageUser)
+        Try
+            Dim sqlConnection As New SqlConnection(conn2)
+            sqlConnection.Open()
+            Dim strsql As String = "select 用户名,性别,电话 from 系统用户表 where 用户名 = '" & manage.Get_manageName() & "'"
+            Dim da As New SqlDataAdapter(strsql, sqlConnection)
+            sqlConnection.Close()
+            Dim objdataSet As New DataSet
+            da.Fill(objdataSet, "manage")
+            Return objdataSet
+        Catch ex As Exception
+            MsgBox("SelectManageTable:" + ex.Message)
+        End Try
+        Return 0
+    End Function
+
 End Module

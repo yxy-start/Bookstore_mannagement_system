@@ -7,8 +7,7 @@ Module UserDao
     Dim conn2 As String = sqlconn2()
 
     '方法：userSelectUsername();
-    '作用：用于查询2个登录用户是否存在
-    '参数：(username,table)
+    '参数：(User)
     '返回值：用户名是否存在于表中(int),1存在，否在不存在
 
     Public Function userSelectUsername(user As User)
@@ -35,8 +34,6 @@ Module UserDao
 
 
     '方法：userSelectPassworld();
-    '作用：用于2个登录用户表的密码判断
-    '参数：(username,table)
     '返回值：1密码正确
     Public Function userSelectPassworld(user As User)
 
@@ -63,26 +60,31 @@ Module UserDao
 
     '方法：userSelect();
     '作用：用户表数据查询
-    '参数：(username,table)
+    '参数：(username)
     '返回值：user
 
     Public Function userSelect(username As String)
-        Dim user As New User
+        Dim user As New User()
+
         Try
             Dim objconn As New OleDbConnection(conn)        '创建连接对象
             Dim objAdap As OleDbDataAdapter                 '创建适配器对象
             Dim objdataSet As New DataSet
-            Dim strsql As String = "select count(*) from " & user.Get_table() & " where 用户名='" & username & "'"
+            Dim strsql As String = "select * from 普通用户表 where 用户名='" & username & "'"
             objAdap = New OleDbDataAdapter(strsql, objconn)
             objdataSet.Reset()                              '清除数据集
             objAdap.Fill(objdataSet, "user")                '第二个参数就是给这个虚拟表起个名字
 
             user.Set_用户名(objdataSet.Tables("user").Rows(0).Item(0))   '第一行第一个单元格
             user.Set_用户密码(objdataSet.Tables("user").Rows(0).Item(1))
+            user.Set_性别(objdataSet.Tables("user").Rows(0).Item(2))
+            user.Set_电话号码(objdataSet.Tables("user").Rows(0).Item(3))
+            'MsgBox(user.Get_性别())
+            Return user
         Catch ex As Exception
-
+            MsgBox("userSelect" + ex.Message)
         End Try
-        Return user
+        Return 0
     End Function
 
     '方法：SelectUsername();
@@ -153,4 +155,123 @@ Module UserDao
 
     End Sub
 
+    Public Function userconsumer_Update(user As User)
+        Try
+            Dim strsql As String = "update 普通用户表 set 性别 = '" & user.Get_性别() & "',电话号码 = '" & user.Get_电话号码() & "' where 用户名 = '" & user.Get_用户名() & "'"
+            Dim objconn As New SqlConnection(conn2)
+            Dim objcmd As New SqlCommand(strsql, objconn)
+            objconn.Open()
+            objcmd.ExecuteNonQuery()
+            objconn.Close()
+            Return user
+        Catch ex As Exception
+            MsgBox("userconsumer_Update" + ex.Message)
+        End Try
+        Return 0
+    End Function
+
+    Public Sub userconsumer_Delete(user As User)
+        Try
+            Dim strsql As String = "delete from  普通用户表  where 用户名 = '" & user.Get_用户名() & "'"
+            Dim objconn As New SqlConnection(conn2)
+            Dim objcmd As New SqlCommand(strsql, objconn)
+            objconn.Open()
+            objcmd.ExecuteNonQuery()
+            objconn.Close()
+        Catch ex As Exception
+            MsgBox("userconsumer_Delete" + ex.Message)
+        End Try
+    End Sub
+
+
+    Public Function SelectUsernameTable(user As User)
+        Try
+            Dim sqlConnection As New SqlConnection(conn2)
+            sqlConnection.Open()
+            Dim strsql As String = "select 用户名,性别,电话号码,籍贯 from 普通用户表 where 用户名 = '" & user.Get_用户名() & "'"
+            Dim da As New SqlDataAdapter(strsql, sqlConnection)
+            sqlConnection.Close()
+            Dim objdataSet As New DataSet
+            da.Fill(objdataSet, "user")
+            Return objdataSet
+        Catch ex As Exception
+            MsgBox("SelectUsernameTable" + ex.Message)
+        End Try
+        Return 0
+    End Function
+
+    Public Function SelectUsersexTable(user As User)
+        Try
+            Dim sqlConnection As New SqlConnection(conn2)
+            sqlConnection.Open()
+            Dim strsql As String = "select 用户名,性别,电话号码,籍贯 from 普通用户表 where 性别 = '" & user.Get_性别() & "'"
+            Dim da As New SqlDataAdapter(strsql, sqlConnection)
+            sqlConnection.Close()
+            Dim objdataSet As New DataSet
+            da.Fill(objdataSet, "user")
+            Return objdataSet
+        Catch ex As Exception
+            MsgBox("SelectUsersexTable" + ex.Message)
+        End Try
+        Return 0
+    End Function
+
+    Public Function SelectUserAllTable(user As User)
+        Try
+            Dim sqlConnection As New SqlConnection(conn2)
+            sqlConnection.Open()
+            Dim strsql As String = "select 用户名,性别,电话号码,籍贯 from 普通用户表"
+            Dim da As New SqlDataAdapter(strsql, sqlConnection)
+            sqlConnection.Close()
+            Dim objdataSet As New DataSet
+            da.Fill(objdataSet, "user")
+            Return objdataSet
+        Catch ex As Exception
+            MsgBox("SelectUserAllTable" + ex.Message)
+        End Try
+        Return 0
+    End Function
+
+    Public Function SelectConsumerAllTable(user As User)
+        Try
+            Dim sqlConnection As New SqlConnection(conn2)
+            sqlConnection.Open()
+            Dim strsql As String = "select 用户名,性别,电话号码,籍贯 from 普通用户表 where 用户名 = '" & user.Get_用户名() & "' and 性别 = '" & user.Get_性别() & "'"
+            Dim da As New SqlDataAdapter(strsql, sqlConnection)
+            sqlConnection.Close()
+            Dim objdataSet As New DataSet
+            da.Fill(objdataSet, "user")
+            Return objdataSet
+        Catch ex As Exception
+            MsgBox("SelectConsumerAllTable" + ex.Message)
+        End Try
+        Return 0
+    End Function
+
+    Public Sub DeleteManageConsumer(user As User)
+        Try
+            Dim strsql As String = "delete from  普通用户表  where 用户名 = '" & user.Get_用户名() & "'"
+            Dim objconn As New SqlConnection(conn2)
+            Dim objcmd As New SqlCommand(strsql, objconn)
+            objconn.Open()
+            objcmd.ExecuteNonQuery()
+            objconn.Close()
+        Catch ex As Exception
+            MsgBox("DeleteManageConsumer" + ex.Message)
+        End Try
+    End Sub
+
+    Public Sub UpdateManageConsumer(user As User)
+        Try
+            Dim strsql As String = "update 普通用户表 set 性别 = '" & user.Get_性别() & "',电话号码 = '" & user.Get_电话号码() & "',籍贯 = '" & user.Get_籍贯() & "' where 用户名 = '" & user.Get_用户名() & "'"
+            Dim objconn As New SqlConnection(conn2)
+            Dim objcmd As New SqlCommand(strsql, objconn)
+            objconn.Open()
+            objcmd.ExecuteNonQuery()
+            objconn.Close()
+            'Return user
+        Catch ex As Exception
+            MsgBox("UpdateManageConsumer" + ex.Message)
+        End Try
+    End Sub
 End Module
