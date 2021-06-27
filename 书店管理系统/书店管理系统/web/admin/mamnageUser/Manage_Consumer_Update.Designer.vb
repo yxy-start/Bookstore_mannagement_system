@@ -47,11 +47,12 @@ Partial Class Manage_Consumer_Update
         Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button1.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("华文行楷", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button1.Location = New System.Drawing.Point(545, 542)
+        Me.Button1.Location = New System.Drawing.Point(613, 650)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(219, 44)
+        Me.Button1.Size = New System.Drawing.Size(246, 53)
         Me.Button1.TabIndex = 54
         Me.Button1.Text = "取消修改"
         Me.Button1.UseVisualStyleBackColor = False
@@ -61,11 +62,12 @@ Partial Class Manage_Consumer_Update
         Me.Button3.BackColor = System.Drawing.Color.Transparent
         Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("华文行楷", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Button3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button3.Location = New System.Drawing.Point(240, 542)
+        Me.Button3.Location = New System.Drawing.Point(270, 650)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(219, 44)
+        Me.Button3.Size = New System.Drawing.Size(246, 53)
         Me.Button3.TabIndex = 53
         Me.Button3.Text = "确认修改"
         Me.Button3.UseVisualStyleBackColor = False
@@ -75,20 +77,23 @@ Partial Class Manage_Consumer_Update
         Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
         Me.GroupBox1.Controls.Add(Me.RadioButton2)
         Me.GroupBox1.Controls.Add(Me.RadioButton1)
-        Me.GroupBox1.Font = New System.Drawing.Font("隶书", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(488, 317)
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.GroupBox1.Location = New System.Drawing.Point(549, 380)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(261, 47)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.GroupBox1.Size = New System.Drawing.Size(294, 56)
         Me.GroupBox1.TabIndex = 52
         Me.GroupBox1.TabStop = False
         '
         'RadioButton2
         '
         Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Font = New System.Drawing.Font("隶书", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.RadioButton2.Location = New System.Drawing.Point(154, 0)
+        Me.RadioButton2.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.RadioButton2.Location = New System.Drawing.Point(173, 0)
+        Me.RadioButton2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(76, 42)
+        Me.RadioButton2.Size = New System.Drawing.Size(93, 56)
         Me.RadioButton2.TabIndex = 1
         Me.RadioButton2.TabStop = True
         Me.RadioButton2.Text = "女"
@@ -97,10 +102,11 @@ Partial Class Manage_Consumer_Update
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Font = New System.Drawing.Font("隶书", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.RadioButton1.Location = New System.Drawing.Point(32, 0)
+        Me.RadioButton1.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.RadioButton1.Location = New System.Drawing.Point(36, 0)
+        Me.RadioButton1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(76, 42)
+        Me.RadioButton1.Size = New System.Drawing.Size(93, 56)
         Me.RadioButton1.TabIndex = 0
         Me.RadioButton1.TabStop = True
         Me.RadioButton1.Text = "男"
@@ -108,22 +114,23 @@ Partial Class Manage_Consumer_Update
         '
         'TextBox1
         '
-        Me.TextBox1.Font = New System.Drawing.Font("隶书", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(488, 253)
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(549, 304)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(261, 47)
+        Me.TextBox1.Size = New System.Drawing.Size(293, 56)
         Me.TextBox1.TabIndex = 51
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("隶书", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(228, 379)
+        Me.Label4.Location = New System.Drawing.Point(256, 455)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(207, 38)
+        Me.Label4.Size = New System.Drawing.Size(248, 52)
         Me.Label4.TabIndex = 50
         Me.Label4.Text = "联系电话："
         '
@@ -131,11 +138,11 @@ Partial Class Manage_Consumer_Update
         '
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("隶书", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(304, 317)
+        Me.Label3.Location = New System.Drawing.Point(342, 380)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(131, 38)
+        Me.Label3.Size = New System.Drawing.Size(158, 52)
         Me.Label3.TabIndex = 49
         Me.Label3.Text = "性别："
         '
@@ -143,11 +150,11 @@ Partial Class Manage_Consumer_Update
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("隶书", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(266, 256)
+        Me.Label2.Location = New System.Drawing.Point(299, 307)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(169, 38)
+        Me.Label2.Size = New System.Drawing.Size(203, 52)
         Me.Label2.TabIndex = 48
         Me.Label2.Text = "用户名："
         '
@@ -155,11 +162,11 @@ Partial Class Manage_Consumer_Update
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("华文行楷", 25.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(241, 66)
+        Me.Label1.Location = New System.Drawing.Point(271, 79)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(504, 45)
+        Me.Label1.Size = New System.Drawing.Size(622, 59)
         Me.Label1.TabIndex = 47
         Me.Label1.Text = "管 理 员 修 改 用 户 信 息"
         '
@@ -167,41 +174,43 @@ Partial Class Manage_Consumer_Update
         '
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.Font = New System.Drawing.Font("隶书", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(304, 440)
+        Me.Label6.Location = New System.Drawing.Point(342, 528)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(131, 38)
+        Me.Label6.Size = New System.Drawing.Size(158, 52)
         Me.Label6.TabIndex = 56
         Me.Label6.Text = "籍贯："
         '
         'TextBox2
         '
-        Me.TextBox2.Font = New System.Drawing.Font("隶书", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(488, 376)
+        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.TextBox2.Location = New System.Drawing.Point(549, 451)
+        Me.TextBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(261, 47)
+        Me.TextBox2.Size = New System.Drawing.Size(293, 56)
         Me.TextBox2.TabIndex = 57
         '
         'TextBox3
         '
-        Me.TextBox3.Font = New System.Drawing.Font("隶书", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(488, 440)
+        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.TextBox3.Location = New System.Drawing.Point(549, 528)
+        Me.TextBox3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TextBox3.Multiline = True
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(261, 47)
+        Me.TextBox3.Size = New System.Drawing.Size(293, 56)
         Me.TextBox3.TabIndex = 58
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Font = New System.Drawing.Font("隶书", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(228, 183)
+        Me.Label5.Location = New System.Drawing.Point(256, 220)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(207, 38)
+        Me.Label5.Size = New System.Drawing.Size(248, 52)
         Me.Label5.TabIndex = 59
         Me.Label5.Text = "用户编号："
         '
@@ -209,21 +218,21 @@ Partial Class Manage_Consumer_Update
         '
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
-        Me.Label7.Font = New System.Drawing.Font("隶书", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Black
-        Me.Label7.Location = New System.Drawing.Point(481, 183)
+        Me.Label7.Location = New System.Drawing.Point(541, 220)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(169, 38)
+        Me.Label7.Size = New System.Drawing.Size(203, 52)
         Me.Label7.TabIndex = 60
         Me.Label7.Text = "用户编号"
         '
         'Manage_Consumer_Update
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(992, 644)
+        Me.ClientSize = New System.Drawing.Size(1116, 773)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.TextBox3)
@@ -237,6 +246,7 @@ Partial Class Manage_Consumer_Update
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "Manage_Consumer_Update"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Manage_Consumer_Update"
