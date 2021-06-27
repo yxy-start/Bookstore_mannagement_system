@@ -28,8 +28,11 @@ Partial Class Manage_Book
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+<<<<<<< HEAD
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
+=======
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
@@ -41,7 +44,10 @@ Partial Class Manage_Book
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
+<<<<<<< HEAD
         Me.Button6 = New System.Windows.Forms.Button()
+=======
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -101,8 +107,11 @@ Partial Class Manage_Book
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
+<<<<<<< HEAD
         Me.GroupBox1.Controls.Add(Me.TextBox4)
         Me.GroupBox1.Controls.Add(Me.Label6)
+=======
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         Me.GroupBox1.Controls.Add(Me.TextBox3)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.ComboBox1)
@@ -115,11 +124,16 @@ Partial Class Manage_Book
         Me.GroupBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.GroupBox1.Location = New System.Drawing.Point(70, 30)
         Me.GroupBox1.Name = "GroupBox1"
+<<<<<<< HEAD
         Me.GroupBox1.Size = New System.Drawing.Size(575, 337)
+=======
+        Me.GroupBox1.Size = New System.Drawing.Size(551, 287)
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         Me.GroupBox1.TabIndex = 22
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "图书的基本数据"
         '
+<<<<<<< HEAD
         'TextBox4
         '
         Me.TextBox4.Location = New System.Drawing.Point(169, 49)
@@ -142,6 +156,11 @@ Partial Class Manage_Book
         'TextBox3
         '
         Me.TextBox3.Location = New System.Drawing.Point(169, 288)
+=======
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(166, 226)
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         Me.TextBox3.Multiline = True
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(261, 37)
@@ -151,7 +170,11 @@ Partial Class Manage_Book
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("隶书", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+<<<<<<< HEAD
         Me.Label4.Location = New System.Drawing.Point(40, 293)
+=======
+        Me.Label4.Location = New System.Drawing.Point(37, 231)
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(58, 24)
         Me.Label4.TabIndex = 8
@@ -161,7 +184,11 @@ Partial Class Manage_Book
         '
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"中国哲学", "宗教理论", "科学技术哲学", "中国政治", "中国军事", "社会科学总论", "语言文字", "成功", "人际沟通", "法学理论", "中国现代小说", "武侠小说", "诗歌", "散文", "小说"})
+<<<<<<< HEAD
         Me.ComboBox1.Location = New System.Drawing.Point(169, 168)
+=======
+        Me.ComboBox1.Location = New System.Drawing.Point(166, 106)
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(121, 31)
         Me.ComboBox1.TabIndex = 7
@@ -170,7 +197,11 @@ Partial Class Manage_Book
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("隶书", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+<<<<<<< HEAD
         Me.Label3.Location = New System.Drawing.Point(40, 229)
+=======
+        Me.Label3.Location = New System.Drawing.Point(37, 167)
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(58, 24)
         Me.Label3.TabIndex = 5
@@ -178,7 +209,11 @@ Partial Class Manage_Book
         '
         'TextBox2
         '
+<<<<<<< HEAD
         Me.TextBox2.Location = New System.Drawing.Point(169, 229)
+=======
+        Me.TextBox2.Location = New System.Drawing.Point(166, 167)
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(261, 37)
@@ -188,7 +223,11 @@ Partial Class Manage_Book
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("隶书", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+<<<<<<< HEAD
         Me.Label2.Location = New System.Drawing.Point(40, 168)
+=======
+        Me.Label2.Location = New System.Drawing.Point(37, 106)
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(106, 24)
         Me.Label2.TabIndex = 3
@@ -196,7 +235,11 @@ Partial Class Manage_Book
         '
         'TextBox1
         '
+<<<<<<< HEAD
         Me.TextBox1.Location = New System.Drawing.Point(169, 109)
+=======
+        Me.TextBox1.Location = New System.Drawing.Point(166, 47)
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(261, 37)
@@ -207,7 +250,11 @@ Partial Class Manage_Book
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("隶书", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+<<<<<<< HEAD
         Me.Label1.Location = New System.Drawing.Point(40, 112)
+=======
+        Me.Label1.Location = New System.Drawing.Point(37, 50)
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(82, 24)
         Me.Label1.TabIndex = 1
@@ -217,10 +264,17 @@ Partial Class Manage_Book
         '
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+<<<<<<< HEAD
         Me.DataGridView1.Location = New System.Drawing.Point(70, 528)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowTemplate.Height = 27
         Me.DataGridView1.Size = New System.Drawing.Size(882, 319)
+=======
+        Me.DataGridView1.Location = New System.Drawing.Point(37, 384)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowTemplate.Height = 27
+        Me.DataGridView1.Size = New System.Drawing.Size(735, 288)
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         Me.DataGridView1.TabIndex = 23
         '
         'Button5
@@ -242,12 +296,17 @@ Partial Class Manage_Book
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("华文行楷", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+<<<<<<< HEAD
         Me.Label5.Location = New System.Drawing.Point(344, 461)
+=======
+        Me.Label5.Location = New System.Drawing.Point(281, 342)
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(328, 40)
         Me.Label5.TabIndex = 38
         Me.Label5.Text = "查 询 信 息 如 下表"
         '
+<<<<<<< HEAD
         'Button6
         '
         Me.Button6.BackColor = System.Drawing.Color.Transparent
@@ -261,13 +320,19 @@ Partial Class Manage_Book
         Me.Button6.Text = "清空"
         Me.Button6.UseVisualStyleBackColor = False
         '
+=======
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         'Manage_Book
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+<<<<<<< HEAD
         Me.ClientSize = New System.Drawing.Size(1060, 859)
         Me.Controls.Add(Me.Button6)
+=======
+        Me.ClientSize = New System.Drawing.Size(914, 702)
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
@@ -297,6 +362,7 @@ Partial Class Manage_Book
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
+<<<<<<< HEAD
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Label5 As System.Windows.Forms.Label
@@ -305,4 +371,11 @@ Partial Class Manage_Book
     Friend WithEvents Button6 As System.Windows.Forms.Button
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
+=======
+    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents Button5 As System.Windows.Forms.Button
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
 End Class

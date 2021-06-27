@@ -6,6 +6,7 @@ Module BookDao
     Dim conn As String = sqlconn()
     Dim conn2 As String = sqlconn2()
 
+<<<<<<< HEAD
     Public Function SelectBookid(book As Book)
         Dim f As Integer
         Try
@@ -25,6 +26,8 @@ Module BookDao
         End If
     End Function
 
+=======
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
     Public Function SelectBookname(book As Book)
         Dim f As Integer
         Try
@@ -85,9 +88,15 @@ Module BookDao
         End If
     End Function
 
+<<<<<<< HEAD
     Public Sub DeleteBookid(book As Book)
         Try
             Dim strsql As String = "delete from Book where bookid ='" & book.Get_bookId() & "'"
+=======
+    Public Sub DeleteBookname(book As Book)
+        Try
+            Dim strsql As String = "delete from Book where bookName ='" & book.Get_bookName() & "'"
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
             Dim objconn As New SqlConnection(conn2)
             Dim objcmd As New SqlCommand(strsql, objconn)
             objconn.Open()
@@ -101,7 +110,11 @@ Module BookDao
 
     Public Sub InsertBook(book As Book)
         Try
+<<<<<<< HEAD
             Dim strsql As String = "insert into Book(bookId ,bookName ,bookGenres ,bookAuthor ,bookPrice,bookPress ) values('" & book.Get_bookId() & "','" & book.Get_bookName() & "','" & book.Get_bookGenres() & "','" & book.Get_bookAuthor() & "','" & book.Get_bookPrice() & "','" & book.Get_bookPress() & "')"
+=======
+            Dim strsql As String = "insert into Book(bookName ,bookGenres ,bookAuthor ,bookPrice ) values('" & book.Get_bookName() & "','" & book.Get_bookGenres() & "','" & book.Get_bookAuthor() & "','" & book.Get_bookPrice() & "')"
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
             Dim objconn As New SqlConnection(conn2)
             Dim objcmd As New SqlCommand(strsql, objconn)
             objconn.Open()
@@ -115,11 +128,19 @@ Module BookDao
 
     Public Sub UpdateBook(book As Book)
         Try
+<<<<<<< HEAD
             Dim strsql As String = "update Book set bookName = '" & book.Get_bookName() & "', bookGenres = '" & book.Get_bookGenres() & "',bookAuthor = '" & book.Get_bookAuthor() & "',bookPrice = '" & book.Get_bookPrice() & "',bookPress = '" & book.Get_bookPress() & "' where bookId ='" & book.Get_bookId() & "'"
+=======
+            Dim strsql As String = "update Book set bookGenres = '" & book.Get_bookGenres() & "',bookAuthor = '" & book.Get_bookAuthor() & "',bookPrice = '" & book.Get_bookPrice() & "' where bookName ='" & book.Get_bookName() & "'"
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
             Dim objconn As New SqlConnection(conn2)
             Dim objcmd As New SqlCommand(strsql, objconn)
             objconn.Open()
             objcmd.ExecuteNonQuery()
+<<<<<<< HEAD
+=======
+            MsgBox("更新书籍成功！")
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
             objconn.Close()
         Catch ex As Exception
             MsgBox("UpdateBook:" + ex.Message)
@@ -140,6 +161,7 @@ Module BookDao
             Return 0
         End Try
     End Function
+<<<<<<< HEAD
     Public Function SelectBookidTable(book As Book)
         Try
             Dim sqlConnection As New SqlConnection(conn2)
@@ -155,6 +177,9 @@ Module BookDao
         End Try
         Return 0
     End Function
+=======
+
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
     Public Function SelectBooknameTable(book As Book)
         Try
             Dim sqlConnection As New SqlConnection(conn2)
@@ -207,7 +232,11 @@ Module BookDao
         Try
             Dim sqlConnection As New SqlConnection(conn2)
             sqlConnection.Open()
+<<<<<<< HEAD
             Dim strsql As String = "select * from Book where  bookId = '" & book.Get_bookId() & "'and  bookName = '" & book.Get_bookName() & "' and bookGenres = '" & book.Get_bookGenres() & "' and bookAuthor = '" & book.Get_bookAuthor() & "'"
+=======
+            Dim strsql As String = "select * from Book where bookName = '" & book.Get_bookName() & "' and bookGenres = '" & book.Get_bookGenres() & "' and bookAuthor = '" & book.Get_bookAuthor() & "'"
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
             Dim da As New SqlDataAdapter(strsql, sqlConnection)
             sqlConnection.Close()
             Dim objdataSet As New DataSet
@@ -223,7 +252,11 @@ Module BookDao
         Try
             Dim sqlConnection As New SqlConnection(conn2)
             sqlConnection.Open()
+<<<<<<< HEAD
             Dim strsql As String = "select * from Book where  bookId = '" & book.Get_bookId() & "'and  bookName = '" & book.Get_bookName() & "' and bookGenres = '" & book.Get_bookGenres() & "'"
+=======
+            Dim strsql As String = "select * from Book where bookName = '" & book.Get_bookName() & "' and bookGenres = '" & book.Get_bookGenres() & "'"
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
             Dim da As New SqlDataAdapter(strsql, sqlConnection)
             sqlConnection.Close()
             Dim objdataSet As New DataSet
@@ -239,7 +272,11 @@ Module BookDao
         Try
             Dim sqlConnection As New SqlConnection(conn2)
             sqlConnection.Open()
+<<<<<<< HEAD
             Dim strsql As String = "select * from Book where bookId = '" & book.Get_bookId() & "'and bookName = '" & book.Get_bookName() & "' and bookAuthor = '" & book.Get_bookAuthor() & "'"
+=======
+            Dim strsql As String = "select * from Book where bookName = '" & book.Get_bookName() & "' and bookAuthor = '" & book.Get_bookAuthor() & "'"
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
             Dim da As New SqlDataAdapter(strsql, sqlConnection)
             sqlConnection.Close()
             Dim objdataSet As New DataSet
@@ -255,7 +292,11 @@ Module BookDao
         Try
             Dim sqlConnection As New SqlConnection(conn2)
             sqlConnection.Open()
+<<<<<<< HEAD
             Dim strsql As String = "select * from Book where bookId = '" & book.Get_bookId() & "'and bookName = '" & book.Get_bookName() & "'"
+=======
+            Dim strsql As String = "select * from Book where bookName = '" & book.Get_bookName() & "'"
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
             Dim da As New SqlDataAdapter(strsql, sqlConnection)
             sqlConnection.Close()
             Dim objdataSet As New DataSet
@@ -271,7 +312,11 @@ Module BookDao
         Try
             Dim sqlConnection As New SqlConnection(conn2)
             sqlConnection.Open()
+<<<<<<< HEAD
             Dim strsql As String = "select * from Book where bookId = '" & book.Get_bookId() & "'and bookGenres = '" & book.Get_bookGenres() & "' and bookAuthor = '" & book.Get_bookAuthor() & "'"
+=======
+            Dim strsql As String = "select * from Book where bookGenres = '" & book.Get_bookGenres() & "' and bookAuthor = '" & book.Get_bookAuthor() & "'"
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
             Dim da As New SqlDataAdapter(strsql, sqlConnection)
             sqlConnection.Close()
             Dim objdataSet As New DataSet
@@ -287,7 +332,11 @@ Module BookDao
         Try
             Dim sqlConnection As New SqlConnection(conn2)
             sqlConnection.Open()
+<<<<<<< HEAD
             Dim strsql As String = "select * from Book where bookId = '" & book.Get_bookId() & "'and bookGenres = '" & book.Get_bookGenres() & "'"
+=======
+            Dim strsql As String = "select * from Book where bookGenres = '" & book.Get_bookGenres() & "'"
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
             Dim da As New SqlDataAdapter(strsql, sqlConnection)
             sqlConnection.Close()
             Dim objdataSet As New DataSet
@@ -303,7 +352,11 @@ Module BookDao
         Try
             Dim sqlConnection As New SqlConnection(conn2)
             sqlConnection.Open()
+<<<<<<< HEAD
             Dim strsql As String = "select * from Book where bookId = '" & book.Get_bookId() & "'and bookAuthor = '" & book.Get_bookAuthor() & "'"
+=======
+            Dim strsql As String = "select * from Book where bookAuthor = '" & book.Get_bookAuthor() & "'"
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
             Dim da As New SqlDataAdapter(strsql, sqlConnection)
             sqlConnection.Close()
             Dim objdataSet As New DataSet
@@ -319,6 +372,7 @@ Module BookDao
         Try
             Dim sqlConnection As New SqlConnection(conn2)
             sqlConnection.Open()
+<<<<<<< HEAD
             Dim strsql As String = "select * from Book where bookId = '" & book.Get_bookId() & "'"
             Dim da As New SqlDataAdapter(strsql, sqlConnection)
             sqlConnection.Close()
@@ -447,6 +501,8 @@ Module BookDao
         Try
             Dim sqlConnection As New SqlConnection(conn2)
             sqlConnection.Open()
+=======
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
             Dim strsql As String = "select * from Book "
             Dim da As New SqlDataAdapter(strsql, sqlConnection)
             sqlConnection.Close()
@@ -454,11 +510,18 @@ Module BookDao
             da.Fill(objdataSet, "book")
             Return objdataSet
         Catch ex As Exception
+<<<<<<< HEAD
             MsgBox("SelectBookTable15" + ex.Message)
+=======
+            MsgBox("SelectBookTable7" + ex.Message)
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         End Try
         Return 0
     End Function
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
 End Module

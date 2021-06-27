@@ -27,6 +27,7 @@
     End Sub
 
     Public Sub userLoginindex(user As User)
+<<<<<<< HEAD
         If (SelectUserid(user) = 0) Then
             userInsert(user)
             Dim dl As New UserLogin
@@ -34,6 +35,16 @@
             dl.ShowDialog()
         Else
             MsgBox("用户编号已存在，请重新输入！")
+=======
+        If (userSelectUsername(user) = 0) Then
+            If (userInsert(user) = 0) Then
+                Dim dl As New UserLogin
+                MsgBox("注册成功,即将返回登录界面！")
+                dl.ShowDialog()
+            End If
+        Else
+            MsgBox("用户已存在！")
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         End If
     End Sub
 
@@ -58,11 +69,18 @@
     End Sub
 
     Public Sub consumerUpdate(user As User)
+<<<<<<< HEAD
             user = userconsumer_Update(user)
             MsgBox("个人信息修改成功！")
             Dim consumer As New Consumer(user)
             consumer.ShowDialog()
 
+=======
+        user = userconsumer_Update(user)
+        MsgBox("个人信息修改成功！")
+        Dim consumer As New Consumer(user)
+        consumer.ShowDialog()
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
     End Sub
 
     Public Sub consumerDelete(user As User)
