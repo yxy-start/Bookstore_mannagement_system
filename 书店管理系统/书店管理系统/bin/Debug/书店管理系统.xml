@@ -6,7 +6,64 @@
 </name>
 </assembly>
 <members>
-<member name="P:书店管理系统.My.Resources.Resources.ResourceManager">
+<member name="T:书店管理系统.BookstoreDataSet.BookDataTable">
+	<summary>
+<<<<<<< HEAD
+Represents the strongly named DataTable class.
+=======
+  Returns the cached ResourceManager instance used by this class.
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
+</summary>
+</member><member name="T:书店管理系统.BookstoreDataSet.BookRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:书店管理系统.BookstoreDataSet.BookRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:书店管理系统.BookstoreDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:书店管理系统.BookstoreDataSetTableAdapters.BookTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:书店管理系统.BookstoreDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(书店管理系统.BookstoreDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:书店管理系统.BookstoreDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(书店管理系统.BookstoreDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:书店管理系统.BookstoreDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(书店管理系统.BookstoreDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+<<<<<<< HEAD
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:书店管理系统.BookstoreDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:书店管理系统.BookstoreDataSetTableAdapters.TableAdapterManager.UpdateAll(书店管理系统.BookstoreDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:书店管理系统.BookstoreDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:书店管理系统.BookstoreDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:书店管理系统.BookstoreDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="P:书店管理系统.My.Resources.Resources.ResourceManager">
 	<summary>
   Returns the cached ResourceManager instance used by this class.
 </summary>
@@ -14,10 +71,14 @@
 	<summary>
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
+=======
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
 </summary>
 </member><member name="T:书店管理系统.My.Resources.Resources">
 	<summary>
   A strongly-typed resource class, for looking up localized strings, etc.
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
 </summary>
 </member><member name="T:书店管理系统.BookstoreDataSet.BookDataTable">
 	<summary>
@@ -69,7 +130,11 @@ Used to sort self-referenced table's rows
 </summary>
 </member><member name="T:书店管理系统.BookstoreDataSetTableAdapters.TableAdapterManager">
 	<summary>
+<<<<<<< HEAD
+  A strongly-typed resource class, for looking up localized strings, etc.
+=======
 TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
 </summary>
 </member>
 </members>

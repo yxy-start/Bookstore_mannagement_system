@@ -120,6 +120,15 @@
     </Compile>
     <Compile Include="service\ManageBookService.vb" />
     <Compile Include="service\UserService.vb" />
+<<<<<<< HEAD
+    <Compile Include="web\admin\mamnageUser\Manage_Consumer_Add.Designer.vb">
+      <DependentUpon>Manage_Consumer_Add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="web\admin\mamnageUser\Manage_Consumer_Add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+=======
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
     <Compile Include="web\user\BookTable.Designer.vb">
       <DependentUpon>BookTable.vb</DependentUpon>
     </Compile>
@@ -230,6 +239,12 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+<<<<<<< HEAD
+    <EmbeddedResource Include="web\admin\mamnageUser\Manage_Consumer_Add.resx">
+      <DependentUpon>Manage_Consumer_Add.vb</DependentUpon>
+    </EmbeddedResource>
+=======
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
     <EmbeddedResource Include="web\user\BookTable.resx">
       <DependentUpon>BookTable.vb</DependentUpon>
     </EmbeddedResource>
@@ -275,10 +290,17 @@
     </EmbeddedResource>
     <EmbeddedResource Include="web\user\UserUpdate.resx">
       <DependentUpon>UserUpdate.vb</DependentUpon>
+<<<<<<< HEAD
     </EmbeddedResource>
     <EmbeddedResource Include="web\admin\manageBook\Manage_Book.resx">
       <DependentUpon>Manage_Book.vb</DependentUpon>
     </EmbeddedResource>
+=======
+    </EmbeddedResource>
+    <EmbeddedResource Include="web\admin\manageBook\Manage_Book.resx">
+      <DependentUpon>Manage_Book.vb</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
     <EmbeddedResource Include="web\admin\mamnageUser\Manage_Consumer.resx">
       <DependentUpon>Manage_Consumer.vb</DependentUpon>
     </EmbeddedResource>

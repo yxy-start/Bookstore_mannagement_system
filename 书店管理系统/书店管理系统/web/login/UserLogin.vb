@@ -32,6 +32,10 @@
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+<<<<<<< HEAD
+
+=======
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         Dim username As String = TextBox1.Text
         Dim password As String = TextBox2.Text
         If username = "" Then
@@ -42,7 +46,11 @@
             Dim update As New UserUpdate(user)
             update.ShowDialog()
 
+<<<<<<< HEAD
+        End If
+=======
         End If  
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click

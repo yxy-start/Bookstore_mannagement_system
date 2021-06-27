@@ -86,3 +86,36 @@ D:\.net实验\Bookstore_mannagement_system\书店管理系统\书店管理系统
 D:\.net实验\Bookstore_mannagement_system\书店管理系统\书店管理系统\obj\Debug\书店管理系统.vbproj.GenerateResource.Cache
 D:\.net实验\Bookstore_mannagement_system\书店管理系统\书店管理系统\obj\Debug\RdlCompile.cache
 D:\.net实验\Bookstore_mannagement_system\书店管理系统\书店管理系统\obj\Debug\RdlCompile.compiled
+<<<<<<< HEAD
+C:\Users\HP\Desktop\书店管理系统\书店管理系统\bin\Debug\书店管理系统.exe.config
+C:\Users\HP\Desktop\书店管理系统\书店管理系统\obj\Debug\书店管理系统.exe
+C:\Users\HP\Desktop\书店管理系统\书店管理系统\obj\Debug\书店管理系统.xml
+C:\Users\HP\Desktop\书店管理系统\书店管理系统\obj\Debug\书店管理系统.pdb
+C:\Users\HP\Desktop\书店管理系统\书店管理系统\bin\Debug\书店管理系统.exe
+C:\Users\HP\Desktop\书店管理系统\书店管理系统\bin\Debug\书店管理系统.pdb
+C:\Users\HP\Desktop\书店管理系统\书店管理系统\bin\Debug\书店管理系统.xml
+C:\Users\HP\Desktop\书店管理系统\书店管理系统\obj\Debug\书店管理系统.vbprojResolveAssemblyReference.cache
+C:\Users\HP\Desktop\书店管理系统\书店管理系统\obj\Debug\书店管理系统.Resources.resources
+C:\Users\HP\Desktop\书店管理系统\书店管理系统\obj\Debug\书店管理系统.BookTable.resources
+C:\Users\HP\Desktop\书店管理系统\书店管理系统\obj\Debug\书店管理系统.Consumer_Book.resources
+C:\Users\HP\Desktop\书店管理系统\书店管理系统\obj\Debug\书店管理系统.Consumer.resources
+C:\Users\HP\Desktop\书店管理系统\书店管理系统\obj\Debug\书店管理系统.Consumer_Update.resources
+C:\Users\HP\Desktop\书店管理系统\书店管理系统\obj\Debug\书店管理系统.Manage_Book_Add.resources
+C:\Users\HP\Desktop\书店管理系统\书店管理系统\obj\Debug\书店管理系统.Manage_Book_Update.resources
+C:\Users\HP\Desktop\书店管理系统\书店管理系统\obj\Debug\书店管理系统.Manage_Consumer_Update.resources
+C:\Users\HP\Desktop\书店管理系统\书店管理系统\obj\Debug\书店管理系统.Manage_User.resources
+C:\Users\HP\Desktop\书店管理系统\书店管理系统\obj\Debug\书店管理系统.StatisticsBook.resources
+C:\Users\HP\Desktop\书店管理系统\书店管理系统\obj\Debug\书店管理系统.StatisticsUser.resources
+C:\Users\HP\Desktop\书店管理系统\书店管理系统\obj\Debug\书店管理系统.UserRegister.resources
+C:\Users\HP\Desktop\书店管理系统\书店管理系统\obj\Debug\书店管理系统.User_Index.resources
+C:\Users\HP\Desktop\书店管理系统\书店管理系统\obj\Debug\书店管理系统.User_System_Index.resources
+C:\Users\HP\Desktop\书店管理系统\书店管理系统\obj\Debug\书店管理系统.UserLogin.resources
+C:\Users\HP\Desktop\书店管理系统\书店管理系统\obj\Debug\书店管理系统.UserUpdate.resources
+C:\Users\HP\Desktop\书店管理系统\书店管理系统\obj\Debug\书店管理系统.Manage_Book.resources
+C:\Users\HP\Desktop\书店管理系统\书店管理系统\obj\Debug\书店管理系统.Manage_Consumer.resources
+C:\Users\HP\Desktop\书店管理系统\书店管理系统\obj\Debug\书店管理系统.vbproj.GenerateResource.Cache
+C:\Users\HP\Desktop\书店管理系统\书店管理系统\obj\Debug\RdlCompile.cache
+C:\Users\HP\Desktop\书店管理系统\书店管理系统\obj\Debug\RdlCompile.compiled
+C:\Users\HP\Desktop\书店管理系统\书店管理系统\obj\Debug\书店管理系统.Manage_Consumer_Add.resources
+=======
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1

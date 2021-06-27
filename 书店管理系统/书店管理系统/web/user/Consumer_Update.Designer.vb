@@ -34,6 +34,13 @@ Partial Class Consumer_Update
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
+<<<<<<< HEAD
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+=======
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -55,7 +62,11 @@ Partial Class Consumer_Update
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("隶书", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
+        Me.Label2.Location = New System.Drawing.Point(260, 195)
+=======
         Me.Label2.Location = New System.Drawing.Point(260, 150)
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(169, 38)
         Me.Label2.TabIndex = 35
@@ -67,7 +78,11 @@ Partial Class Consumer_Update
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("隶书", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
+        Me.Label3.Location = New System.Drawing.Point(298, 252)
+=======
         Me.Label3.Location = New System.Drawing.Point(298, 238)
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(131, 38)
         Me.Label3.TabIndex = 36
@@ -88,7 +103,11 @@ Partial Class Consumer_Update
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("隶书", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+<<<<<<< HEAD
+        Me.TextBox1.Location = New System.Drawing.Point(482, 195)
+=======
         Me.TextBox1.Location = New System.Drawing.Point(482, 329)
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(261, 47)
@@ -100,7 +119,11 @@ Partial Class Consumer_Update
         Me.GroupBox1.Controls.Add(Me.RadioButton2)
         Me.GroupBox1.Controls.Add(Me.RadioButton1)
         Me.GroupBox1.Font = New System.Drawing.Font("隶书", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+<<<<<<< HEAD
+        Me.GroupBox1.Location = New System.Drawing.Point(482, 252)
+=======
         Me.GroupBox1.Location = New System.Drawing.Point(482, 238)
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(261, 47)
         Me.GroupBox1.TabIndex = 40
@@ -137,7 +160,11 @@ Partial Class Consumer_Update
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("华文行楷", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Button3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+<<<<<<< HEAD
+        Me.Button3.Location = New System.Drawing.Point(250, 505)
+=======
         Me.Button3.Location = New System.Drawing.Point(252, 435)
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(219, 44)
         Me.Button3.TabIndex = 44
@@ -151,7 +178,11 @@ Partial Class Consumer_Update
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("华文行楷", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+<<<<<<< HEAD
+        Me.Button1.Location = New System.Drawing.Point(555, 505)
+=======
         Me.Button1.Location = New System.Drawing.Point(557, 435)
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(219, 44)
         Me.Button1.TabIndex = 45
@@ -164,11 +195,61 @@ Partial Class Consumer_Update
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("隶书", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Black
+<<<<<<< HEAD
+        Me.Label5.Location = New System.Drawing.Point(222, 126)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(207, 38)
+        Me.Label5.TabIndex = 46
+        Me.Label5.Text = "用户编号："
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Font = New System.Drawing.Font("隶书", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.TextBox2.Location = New System.Drawing.Point(482, 318)
+        Me.TextBox2.Multiline = True
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(261, 47)
+        Me.TextBox2.TabIndex = 47
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("隶书", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.Black
+        Me.Label6.Location = New System.Drawing.Point(475, 126)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(131, 38)
+        Me.Label6.TabIndex = 48
+        Me.Label6.Text = "userID"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("隶书", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.Black
+        Me.Label7.Location = New System.Drawing.Point(298, 389)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(131, 38)
+        Me.Label7.TabIndex = 49
+        Me.Label7.Text = "籍贯："
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Font = New System.Drawing.Font("隶书", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.TextBox3.Location = New System.Drawing.Point(482, 389)
+        Me.TextBox3.Multiline = True
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(261, 47)
+        Me.TextBox3.TabIndex = 50
+=======
         Me.Label5.Location = New System.Drawing.Point(475, 150)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(131, 38)
         Me.Label5.TabIndex = 46
         Me.Label5.Text = "用户名"
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         '
         'Consumer_Update
         '
@@ -176,7 +257,15 @@ Partial Class Consumer_Update
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+<<<<<<< HEAD
+        Me.ClientSize = New System.Drawing.Size(995, 624)
+        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.TextBox2)
+=======
         Me.ClientSize = New System.Drawing.Size(992, 552)
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Button3)
@@ -206,4 +295,11 @@ Partial Class Consumer_Update
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Label5 As System.Windows.Forms.Label
+<<<<<<< HEAD
+    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+=======
+>>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
 End Class
