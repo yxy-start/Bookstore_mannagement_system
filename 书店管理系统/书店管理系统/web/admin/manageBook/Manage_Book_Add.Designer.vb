@@ -34,14 +34,11 @@ Partial Class Manage_Book_Add
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
-<<<<<<< HEAD
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-=======
->>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         Me.SuspendLayout()
         '
         'ComboBox1
@@ -49,24 +46,15 @@ Partial Class Manage_Book_Add
         Me.ComboBox1.Font = New System.Drawing.Font("华文行楷", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"中国哲学", "宗教理论", "科学技术哲学", "中国政治", "中国军事", "社会科学总论", "语言文字", "成功", "人际沟通", "法学理论", "中国现代小说", "武侠小说", "诗歌", "散文", "小说"})
-<<<<<<< HEAD
         Me.ComboBox1.Location = New System.Drawing.Point(513, 259)
-=======
-        Me.ComboBox1.Location = New System.Drawing.Point(491, 215)
->>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(261, 37)
         Me.ComboBox1.TabIndex = 80
         '
         'TextBox2
         '
-<<<<<<< HEAD
         Me.TextBox2.Font = New System.Drawing.Font("隶书", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.TextBox2.Location = New System.Drawing.Point(513, 321)
-=======
-        Me.TextBox2.Font = New System.Drawing.Font("隶书", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(491, 277)
->>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(261, 46)
@@ -78,11 +66,7 @@ Partial Class Manage_Book_Add
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("隶书", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Black
-<<<<<<< HEAD
         Me.Label6.Location = New System.Drawing.Point(306, 385)
-=======
-        Me.Label6.Location = New System.Drawing.Point(284, 341)
->>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(131, 38)
         Me.Label6.TabIndex = 78
@@ -95,11 +79,7 @@ Partial Class Manage_Book_Add
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("华文行楷", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-<<<<<<< HEAD
         Me.Button1.Location = New System.Drawing.Point(566, 542)
-=======
-        Me.Button1.Location = New System.Drawing.Point(566, 439)
->>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(219, 44)
         Me.Button1.TabIndex = 76
@@ -113,11 +93,7 @@ Partial Class Manage_Book_Add
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("华文行楷", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Button3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-<<<<<<< HEAD
         Me.Button3.Location = New System.Drawing.Point(261, 542)
-=======
-        Me.Button3.Location = New System.Drawing.Point(261, 439)
->>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(219, 44)
         Me.Button3.TabIndex = 75
@@ -126,13 +102,8 @@ Partial Class Manage_Book_Add
         '
         'TextBox1
         '
-<<<<<<< HEAD
         Me.TextBox1.Font = New System.Drawing.Font("隶书", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.TextBox1.Location = New System.Drawing.Point(513, 189)
-=======
-        Me.TextBox1.Font = New System.Drawing.Font("隶书", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(491, 145)
->>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(261, 47)
@@ -144,11 +115,7 @@ Partial Class Manage_Book_Add
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("隶书", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Black
-<<<<<<< HEAD
         Me.Label4.Location = New System.Drawing.Point(306, 324)
-=======
-        Me.Label4.Location = New System.Drawing.Point(284, 280)
->>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(131, 38)
         Me.Label4.TabIndex = 73
@@ -160,11 +127,7 @@ Partial Class Manage_Book_Add
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("隶书", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
-<<<<<<< HEAD
         Me.Label3.Location = New System.Drawing.Point(230, 259)
-=======
-        Me.Label3.Location = New System.Drawing.Point(208, 215)
->>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(207, 38)
         Me.Label3.TabIndex = 72
@@ -176,11 +139,7 @@ Partial Class Manage_Book_Add
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("隶书", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-<<<<<<< HEAD
         Me.Label2.Location = New System.Drawing.Point(306, 189)
-=======
-        Me.Label2.Location = New System.Drawing.Point(284, 154)
->>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(131, 38)
         Me.Label2.TabIndex = 71
@@ -192,11 +151,7 @@ Partial Class Manage_Book_Add
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("华文行楷", 25.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-<<<<<<< HEAD
         Me.Label1.Location = New System.Drawing.Point(253, 30)
-=======
-        Me.Label1.Location = New System.Drawing.Point(253, 64)
->>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(504, 45)
         Me.Label1.TabIndex = 70
@@ -204,19 +159,13 @@ Partial Class Manage_Book_Add
         '
         'TextBox3
         '
-<<<<<<< HEAD
         Me.TextBox3.Font = New System.Drawing.Font("隶书", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.TextBox3.Location = New System.Drawing.Point(513, 385)
-=======
-        Me.TextBox3.Font = New System.Drawing.Font("隶书", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(491, 341)
->>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         Me.TextBox3.Multiline = True
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(261, 47)
         Me.TextBox3.TabIndex = 81
         '
-<<<<<<< HEAD
         'TextBox4
         '
         Me.TextBox4.Font = New System.Drawing.Font("隶书", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
@@ -271,24 +220,18 @@ Partial Class Manage_Book_Add
         Me.Label8.TabIndex = 86
         Me.Label8.Text = "如：P001"
         '
-=======
->>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         'Manage_Book_Add
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-<<<<<<< HEAD
         Me.ClientSize = New System.Drawing.Size(1013, 633)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.TextBox5)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.Label5)
-=======
-        Me.ClientSize = New System.Drawing.Size(992, 546)
->>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.TextBox2)
@@ -301,10 +244,7 @@ Partial Class Manage_Book_Add
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Manage_Book_Add"
-<<<<<<< HEAD
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-=======
->>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         Me.Text = "Manage_Book_Add"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -321,12 +261,9 @@ Partial Class Manage_Book_Add
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-<<<<<<< HEAD
     Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
-=======
->>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
 End Class

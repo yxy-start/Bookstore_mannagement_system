@@ -1,9 +1,6 @@
 ﻿Public Class User
-<<<<<<< HEAD
 
     Private 用户编号 As String
-=======
->>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
     Private 用户名 As String
     Private 用户密码 As String
     Private 性别 As String
@@ -11,7 +8,6 @@
     Private 籍贯 As String
     Private table As String
 
-<<<<<<< HEAD
 
     Public Function Get_用户编号()
         Return 用户编号
@@ -19,8 +15,6 @@
     Public Sub Set_用户编号(userId As String)
         Me.用户编号 = userId
     End Sub
-=======
->>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
     Public Function Get_用户名()
         Return 用户名
     End Function

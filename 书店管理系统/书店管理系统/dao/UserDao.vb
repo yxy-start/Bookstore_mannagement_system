@@ -23,11 +23,7 @@ Module UserDao
             objconn.Close()
             objcmd.Dispose()
         Catch ex As Exception
-<<<<<<< HEAD
             MsgBox("userSelectUsername" + ex.Message)
-=======
-
->>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         End Try
         If (f > 0) Then
             Return 1
@@ -52,11 +48,7 @@ Module UserDao
             objAdap.Fill(objDataSet, "user")            '第二个参数就是给这个虚拟表起个名字
             f = objDataSet.Tables("user").Rows(0).Item(0)
         Catch ex As Exception
-<<<<<<< HEAD
             MsgBox("userSelectPassworld" + ex.Message)
-=======
-
->>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         End Try
         If (Int(user.Get_用户密码()) = f) Then
             Return 1
@@ -83,19 +75,12 @@ Module UserDao
             objdataSet.Reset()                              '清除数据集
             objAdap.Fill(objdataSet, "user")                '第二个参数就是给这个虚拟表起个名字
 
-<<<<<<< HEAD
             user.Set_用户编号(objdataSet.Tables("user").Rows(0).Item(0))   '第一行第一个单元格
             user.Set_用户名(objdataSet.Tables("user").Rows(0).Item(1))   '第一行第一个单元格
             user.Set_用户密码(objdataSet.Tables("user").Rows(0).Item(2))
             user.Set_性别(objdataSet.Tables("user").Rows(0).Item(3))
             user.Set_电话号码(objdataSet.Tables("user").Rows(0).Item(4))
             user.Set_籍贯(objdataSet.Tables("user").Rows(0).Item(5))
-=======
-            user.Set_用户名(objdataSet.Tables("user").Rows(0).Item(0))   '第一行第一个单元格
-            user.Set_用户密码(objdataSet.Tables("user").Rows(0).Item(1))
-            user.Set_性别(objdataSet.Tables("user").Rows(0).Item(2))
-            user.Set_电话号码(objdataSet.Tables("user").Rows(0).Item(3))
->>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
             'MsgBox(user.Get_性别())
             Return user
         Catch ex As Exception
@@ -104,7 +89,6 @@ Module UserDao
         Return 0
     End Function
 
-<<<<<<< HEAD
     '方法：SelectUserid();
     '作用：查询用户名
     '参数：(userRegister)
@@ -129,16 +113,10 @@ Module UserDao
         End If
     End Function
 
-=======
->>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
     '方法：SelectUsername();
     '作用：查询用户名
     '参数：(userRegister)
     Public Function SelectUsername(user As User)
-<<<<<<< HEAD
-=======
-
->>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         Dim f As Integer
         Try
             Dim objconn As New SqlConnection(conn2)
@@ -150,11 +128,7 @@ Module UserDao
             objcmd.Dispose()
 
         Catch ex As Exception
-<<<<<<< HEAD
             MsgBox("SelectUsername" + ex.Message)
-=======
-
->>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         End Try
         If (f > 0) Then
             Return 1
@@ -166,7 +140,6 @@ Module UserDao
     '方法：userInsert();
     '作用：用户添加
     '参数：(user)
-<<<<<<< HEAD
     Public Sub userInsert(user As User)
 
         Try
@@ -218,44 +191,12 @@ Module UserDao
     Public Sub userconsumer_Delete(user As User)
         Try
             Dim strsql As String = "delete from  普通用户表  where 用户编号 = '" & user.Get_用户编号() & "'"
-=======
-    Public Function userInsert(user As User)
-
-        Dim f As Integer
-        Try
-            Dim objconn As New SqlConnection(conn2)
-            Dim strsql As String = "insert into 普通用户表(用户名,用户密码,性别,电话号码) values ('" & user.Get_用户名() & "','" & user.Get_用户密码() & "','" & user.Get_性别() & "','" & user.Get_电话号码() & "')"
-            objconn.Open()
-            Dim objcmd As New SqlCommand(strsql, objconn)
-            f = objcmd.ExecuteScalar
-            objconn.Close()
-            objcmd.Dispose()
-        Catch ex As Exception
-            MsgBox("添加失败：" + ex.Message)
-        End Try
-        If (f > 0) Then
-            Return 1
-        Else
-            Return 0
-        End If
-
-    End Function
-
-    '方法：userUpdatepassworld();
-    '作用：用户密码修改
-    '参数：(user)
-    Public Sub userUpdatepassworld(user As User)
-
-        Try
-            Dim strsql As String = "update 普通用户表 set 用户密码 = '" & user.Get_用户密码() & "' where 用户名 = '" & user.Get_用户名() & "'"
->>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
             Dim objconn As New SqlConnection(conn2)
             Dim objcmd As New SqlCommand(strsql, objconn)
             objconn.Open()
             objcmd.ExecuteNonQuery()
             objconn.Close()
         Catch ex As Exception
-<<<<<<< HEAD
             MsgBox("userconsumer_Delete" + ex.Message)
         End Try
     End Sub
@@ -272,54 +213,15 @@ Module UserDao
             Return objdataSet
         Catch ex As Exception
             MsgBox("SelectUseridTable" + ex.Message)
-=======
-            MsgBox("userUpdata" + ex.Message)
-        End Try
-
-    End Sub
-
-    Public Function userconsumer_Update(user As User)
-        Try
-            Dim strsql As String = "update 普通用户表 set 性别 = '" & user.Get_性别() & "',电话号码 = '" & user.Get_电话号码() & "' where 用户名 = '" & user.Get_用户名() & "'"
-            Dim objconn As New SqlConnection(conn2)
-            Dim objcmd As New SqlCommand(strsql, objconn)
-            objconn.Open()
-            objcmd.ExecuteNonQuery()
-            objconn.Close()
-            Return user
-        Catch ex As Exception
-            MsgBox("userconsumer_Update" + ex.Message)
->>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
         End Try
         Return 0
     End Function
 
-<<<<<<< HEAD
-=======
-    Public Sub userconsumer_Delete(user As User)
-        Try
-            Dim strsql As String = "delete from  普通用户表  where 用户名 = '" & user.Get_用户名() & "'"
-            Dim objconn As New SqlConnection(conn2)
-            Dim objcmd As New SqlCommand(strsql, objconn)
-            objconn.Open()
-            objcmd.ExecuteNonQuery()
-            objconn.Close()
-        Catch ex As Exception
-            MsgBox("userconsumer_Delete" + ex.Message)
-        End Try
-    End Sub
-
-
->>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
     Public Function SelectUsernameTable(user As User)
         Try
             Dim sqlConnection As New SqlConnection(conn2)
             sqlConnection.Open()
-<<<<<<< HEAD
             Dim strsql As String = "select 用户编号,用户名,性别,电话号码,籍贯 from 普通用户表 where 用户名 = '" & user.Get_用户名() & "'"
-=======
-            Dim strsql As String = "select 用户名,性别,电话号码,籍贯 from 普通用户表 where 用户名 = '" & user.Get_用户名() & "'"
->>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
             Dim da As New SqlDataAdapter(strsql, sqlConnection)
             sqlConnection.Close()
             Dim objdataSet As New DataSet
@@ -335,11 +237,7 @@ Module UserDao
         Try
             Dim sqlConnection As New SqlConnection(conn2)
             sqlConnection.Open()
-<<<<<<< HEAD
             Dim strsql As String = "select 用户编号,用户名,性别,电话号码,籍贯 from 普通用户表 where 性别 = '" & user.Get_性别() & "'"
-=======
-            Dim strsql As String = "select 用户名,性别,电话号码,籍贯 from 普通用户表 where 性别 = '" & user.Get_性别() & "'"
->>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
             Dim da As New SqlDataAdapter(strsql, sqlConnection)
             sqlConnection.Close()
             Dim objdataSet As New DataSet
@@ -350,7 +248,6 @@ Module UserDao
         End Try
         Return 0
     End Function
-<<<<<<< HEAD
     Public Function SelectUserfrom(user As User)
         Dim f As Integer
         Try
@@ -385,18 +282,12 @@ Module UserDao
         End Try
         Return 0
     End Function
-=======
->>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
 
     Public Function SelectUserAllTable(user As User)
         Try
             Dim sqlConnection As New SqlConnection(conn2)
             sqlConnection.Open()
-<<<<<<< HEAD
             Dim strsql As String = "select 用户编号,用户名,性别,电话号码,籍贯 from 普通用户表"
-=======
-            Dim strsql As String = "select 用户名,性别,电话号码,籍贯 from 普通用户表"
->>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
             Dim da As New SqlDataAdapter(strsql, sqlConnection)
             sqlConnection.Close()
             Dim objdataSet As New DataSet
@@ -412,11 +303,7 @@ Module UserDao
         Try
             Dim sqlConnection As New SqlConnection(conn2)
             sqlConnection.Open()
-<<<<<<< HEAD
             Dim strsql As String = "select 用户编号,用户名,性别,电话号码,籍贯 from 普通用户表 where 用户名 = '" & user.Get_用户名() & "' and 性别 = '" & user.Get_性别() & "'"
-=======
-            Dim strsql As String = "select 用户名,性别,电话号码,籍贯 from 普通用户表 where 用户名 = '" & user.Get_用户名() & "' and 性别 = '" & user.Get_性别() & "'"
->>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
             Dim da As New SqlDataAdapter(strsql, sqlConnection)
             sqlConnection.Close()
             Dim objdataSet As New DataSet
@@ -430,11 +317,7 @@ Module UserDao
 
     Public Sub DeleteManageConsumer(user As User)
         Try
-<<<<<<< HEAD
             Dim strsql As String = "delete from  普通用户表  where 用户编号 = '" & user.Get_用户编号() & "'"
-=======
-            Dim strsql As String = "delete from  普通用户表  where 用户名 = '" & user.Get_用户名() & "'"
->>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
             Dim objconn As New SqlConnection(conn2)
             Dim objcmd As New SqlCommand(strsql, objconn)
             objconn.Open()
@@ -447,11 +330,7 @@ Module UserDao
 
     Public Sub UpdateManageConsumer(user As User)
         Try
-<<<<<<< HEAD
             Dim strsql As String = "update 普通用户表 set  用户名 = '" & user.Get_用户名() & "',性别 = '" & user.Get_性别() & "',电话号码 = '" & user.Get_电话号码() & "',籍贯 = '" & user.Get_籍贯() & "' where 用户编号 = '" & user.Get_用户编号() & "'"
-=======
-            Dim strsql As String = "update 普通用户表 set 性别 = '" & user.Get_性别() & "',电话号码 = '" & user.Get_电话号码() & "',籍贯 = '" & user.Get_籍贯() & "' where 用户名 = '" & user.Get_用户名() & "'"
->>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
             Dim objconn As New SqlConnection(conn2)
             Dim objcmd As New SqlCommand(strsql, objconn)
             objconn.Open()
@@ -462,7 +341,6 @@ Module UserDao
             MsgBox("UpdateManageConsumer" + ex.Message)
         End Try
     End Sub
-<<<<<<< HEAD
 
     Public Sub InsertManageConsumer(user As User)
         Try
@@ -478,6 +356,4 @@ Module UserDao
         End Try
 
     End Sub
-=======
->>>>>>> 41ebf7d88b3ef9cd38b46e1b73ce164c29239ad1
 End Module
