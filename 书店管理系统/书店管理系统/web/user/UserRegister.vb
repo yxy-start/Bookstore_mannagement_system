@@ -5,7 +5,7 @@
         TextBox2.Text = ""
         TextBox4.Text = ""
         TextBox3.Text = ""
-        TextBox5.Text = ""
+
         RadioButton1.Checked = False
         RadioButton2.Checked = False
     End Sub
@@ -16,12 +16,13 @@
         TextBox2.Text = ""
         TextBox3.Text = ""
         TextBox4.Text = ""
-        TextBox5.Text = ""
+
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim user As New User()
-        Dim userid As String = TextBox5.Text.Trim
+        CountUserid(user)
+        Dim userid As String = "PT" & user.Get_count + 1
         Dim username As String = TextBox1.Text.Trim
         Dim passworld As String = TextBox2.Text.Trim
         Dim userFrom As String = TextBox3.Text.Trim
@@ -52,6 +53,7 @@
                                 If (RadioButton2.Checked = True) Then
                                     user.Set_性别("女")
                                 End If
+
                                 user.Set_用户编号(userid)
                                 user.Set_用户名(username)
                                 user.Set_用户密码(passworld)
@@ -75,4 +77,6 @@
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Me.Close()
     End Sub
+
+   
 End Class

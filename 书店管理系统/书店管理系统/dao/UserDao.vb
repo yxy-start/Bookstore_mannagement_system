@@ -72,9 +72,9 @@ Module UserDao
             Dim objdataSet As New DataSet
             Dim strsql As String = "select * from 普通用户表 where 用户名='" & username & "'"
             objAdap = New OleDbDataAdapter(strsql, objconn)
-            objdataSet.Reset()                              '清除数据集
-            objAdap.Fill(objdataSet, "user")                '第二个参数就是给这个虚拟表起个名字
 
+            objdataSet.Reset()'清除数据集
+            objAdap.Fill(objdataSet, "user")                '第二个参数就是给这个虚拟表起个名字
             user.Set_用户编号(objdataSet.Tables("user").Rows(0).Item(0))   '第一行第一个单元格
             user.Set_用户名(objdataSet.Tables("user").Rows(0).Item(1))   '第一行第一个单元格
             user.Set_用户密码(objdataSet.Tables("user").Rows(0).Item(2))
@@ -82,6 +82,8 @@ Module UserDao
             user.Set_电话号码(objdataSet.Tables("user").Rows(0).Item(4))
             user.Set_籍贯(objdataSet.Tables("user").Rows(0).Item(5))
             'MsgBox(user.Get_性别())
+
+
             Return user
         Catch ex As Exception
             MsgBox("userSelect" + ex.Message)
@@ -356,4 +358,23 @@ Module UserDao
         End Try
 
     End Sub
+    '方法： CountUserid();
+    '作用：统计用户
+    '参数：(userRegister)
+    Public Function CountUserid(user As User)
+        Try
+            Dim objconn As New OleDbConnection(conn)        '创建连接对象
+            Dim objAdap As OleDbDataAdapter                 '创建适配器对象
+            Dim objdataSet As New DataSet
+            Dim strsql As String = "select count(用户编号) from 普通用户表"
+            objAdap = New OleDbDataAdapter(strsql, objconn)
+            objdataSet.Reset() '清除数据集
+            objAdap.Fill(objdataSet, "user")                '第二个参数就是给这个虚拟表起个名字
+            user.Set_count(objdataSet.Tables("user").Rows(0).Item(0))   '第一行第一个单元格
+            Return user
+        Catch ex As Exception
+            MsgBox("CountUserid" + ex.Message)
+        End Try
+        Return 0
+    End Function
 End Module

@@ -116,3 +116,4 @@ C:\Users\HP\Desktop\书店管理系统\书店管理系统\obj\Debug\书店管理
 C:\Users\HP\Desktop\书店管理系统\书店管理系统\obj\Debug\RdlCompile.cache
 C:\Users\HP\Desktop\书店管理系统\书店管理系统\obj\Debug\RdlCompile.compiled
 C:\Users\HP\Desktop\书店管理系统\书店管理系统\obj\Debug\书店管理系统.Manage_Consumer_Add.resources
+D:\.net实验\Bookstore_mannagement_system\书店管理系统\书店管理系统\obj\Debug\书店管理系统.Manage_Consumer_Add.resources

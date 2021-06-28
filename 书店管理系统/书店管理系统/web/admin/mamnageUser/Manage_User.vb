@@ -8,7 +8,8 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-
+        CountManageUser(manageUser)
+        Dim manageid As String = "CT" & manageUser.Get_manageCount + 1
         Dim managename As String = TextBox1.Text
         Dim managepassworld As String = TextBox2.Text
         Dim manageiphone As String = TextBox3.Text
@@ -30,6 +31,8 @@
                         If (RadioButton2.Checked = True) Then
                             manageUser.Set_manageSex("女")
                         End If
+
+                        manageUser.Set_manageId(manageid)
                         manageUser.Set_manageName(managename)
                         manageUser.Set_managePassworld(managepassworld)
                         manageUser.Set_manageIphone(manageiphone)
@@ -82,7 +85,5 @@
     End Sub
 
    
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
-
-    End Sub
+   
 End Class

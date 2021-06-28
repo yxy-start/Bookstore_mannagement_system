@@ -51,6 +51,7 @@
 
     Public Sub Consumer_Select(username As String)
         Dim user As User
+        MsgBox(username)
         user = userSelect(username)
         'MsgBox(user.Get_用户名())
         Dim consumer As New Consumer(user)

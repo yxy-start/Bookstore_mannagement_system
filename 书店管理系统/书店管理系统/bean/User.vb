@@ -7,6 +7,7 @@
     Private 电话号码 As String
     Private 籍贯 As String
     Private table As String
+    Private count As Integer
 
 
     Public Function Get_用户编号()
@@ -15,6 +16,14 @@
     Public Sub Set_用户编号(userId As String)
         Me.用户编号 = userId
     End Sub
+   
+    Public Sub Set_count(count As Integer)
+        Me.count = count
+    End Sub
+    Public Function Get_count()
+
+        Return count
+    End Function
     Public Function Get_用户名()
         Return 用户名
     End Function
@@ -58,5 +67,5 @@
     Public Sub Set_table(t As String)
         Me.table = t
     End Sub
-
+   
 End Class

@@ -62,11 +62,11 @@ Partial Class User_Index
         '
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Blue
-        Me.Label5.Font = New System.Drawing.Font("隶书", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label5.Location = New System.Drawing.Point(1139, 498)
+        Me.Label5.Location = New System.Drawing.Point(1281, 598)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(89, 19)
+        Me.Label5.Size = New System.Drawing.Size(100, 26)
         Me.Label5.TabIndex = 43
         Me.Label5.Text = "退出系统"
         '
@@ -74,9 +74,10 @@ Partial Class User_Index
         '
         Me.PictureBox4.BackgroundImage = CType(resources.GetObject("PictureBox4.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox4.Location = New System.Drawing.Point(1084, 357)
+        Me.PictureBox4.Location = New System.Drawing.Point(1220, 428)
+        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(189, 181)
+        Me.PictureBox4.Size = New System.Drawing.Size(213, 217)
         Me.PictureBox4.TabIndex = 42
         Me.PictureBox4.TabStop = False
         '
@@ -84,11 +85,11 @@ Partial Class User_Index
         '
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Blue
-        Me.Label4.Font = New System.Drawing.Font("隶书", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label4.Location = New System.Drawing.Point(883, 498)
+        Me.Label4.Location = New System.Drawing.Point(993, 598)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(129, 19)
+        Me.Label4.Size = New System.Drawing.Size(144, 26)
         Me.Label4.TabIndex = 41
         Me.Label4.Text = "图书信息查询"
         '
@@ -96,11 +97,11 @@ Partial Class User_Index
         '
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Blue
-        Me.Label3.Font = New System.Drawing.Font("隶书", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label3.Location = New System.Drawing.Point(641, 498)
+        Me.Label3.Location = New System.Drawing.Point(721, 598)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(129, 19)
+        Me.Label3.Size = New System.Drawing.Size(144, 26)
         Me.Label3.TabIndex = 40
         Me.Label3.Text = "图书类别查询"
         '
@@ -108,11 +109,11 @@ Partial Class User_Index
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Blue
-        Me.Label2.Font = New System.Drawing.Font("隶书", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label2.Location = New System.Drawing.Point(406, 498)
+        Me.Label2.Location = New System.Drawing.Point(457, 598)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(129, 19)
+        Me.Label2.Size = New System.Drawing.Size(144, 26)
         Me.Label2.TabIndex = 39
         Me.Label2.Text = "个人信息查询"
         '
@@ -120,9 +121,10 @@ Partial Class User_Index
         '
         Me.PictureBox3.BackgroundImage = CType(resources.GetObject("PictureBox3.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox3.Location = New System.Drawing.Point(851, 357)
+        Me.PictureBox3.Location = New System.Drawing.Point(957, 428)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(189, 181)
+        Me.PictureBox3.Size = New System.Drawing.Size(213, 217)
         Me.PictureBox3.TabIndex = 38
         Me.PictureBox3.TabStop = False
         '
@@ -130,9 +132,10 @@ Partial Class User_Index
         '
         Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox2.Location = New System.Drawing.Point(614, 357)
+        Me.PictureBox2.Location = New System.Drawing.Point(691, 428)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(189, 181)
+        Me.PictureBox2.Size = New System.Drawing.Size(213, 217)
         Me.PictureBox2.TabIndex = 37
         Me.PictureBox2.TabStop = False
         '
@@ -140,9 +143,10 @@ Partial Class User_Index
         '
         Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(376, 357)
+        Me.PictureBox1.Location = New System.Drawing.Point(423, 428)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(189, 181)
+        Me.PictureBox1.Size = New System.Drawing.Size(213, 217)
         Me.PictureBox1.TabIndex = 36
         Me.PictureBox1.TabStop = False
         '
@@ -150,10 +154,10 @@ Partial Class User_Index
         '
         Me.ToolStrip1.BackColor = System.Drawing.Color.SteelBlue
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripButton3, Me.ToolStripButton4})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 27)
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 34)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(0, 0, 2, 0)
-        Me.ToolStrip1.Size = New System.Drawing.Size(1454, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1636, 25)
         Me.ToolStrip1.TabIndex = 35
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -196,10 +200,10 @@ Partial Class User_Index
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.SeaShell
-        Me.Button1.Location = New System.Drawing.Point(272, 55)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.Button1.Location = New System.Drawing.Point(306, 66)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(27, 696)
+        Me.Button1.Size = New System.Drawing.Size(30, 835)
         Me.Button1.TabIndex = 34
         Me.Button1.Text = "隐藏引导区"
         Me.Button1.UseVisualStyleBackColor = False
@@ -208,21 +212,22 @@ Partial Class User_Index
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("华文行楷", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Red
-        Me.Label1.Location = New System.Drawing.Point(346, 156)
+        Me.Label1.Location = New System.Drawing.Point(389, 187)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(927, 63)
+        Me.Label1.Size = New System.Drawing.Size(1115, 82)
         Me.Label1.TabIndex = 33
         Me.Label1.Text = "立身以立学为先，立学以读书为本"
         '
         'TreeView1
         '
         Me.TreeView1.BackColor = System.Drawing.Color.CadetBlue
-        Me.TreeView1.Font = New System.Drawing.Font("隶书", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.TreeView1.Location = New System.Drawing.Point(0, 55)
+        Me.TreeView1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.TreeView1.Location = New System.Drawing.Point(0, 66)
+        Me.TreeView1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TreeView1.Name = "TreeView1"
-        Me.TreeView1.Size = New System.Drawing.Size(275, 696)
+        Me.TreeView1.Size = New System.Drawing.Size(309, 834)
         Me.TreeView1.TabIndex = 32
         '
         'MenuStrip1
@@ -231,71 +236,72 @@ Partial Class User_Index
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.个人信息查询ToolStripMenuItem, Me.图书类别管理ToolStripMenuItem, Me.帮助ToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1454, 27)
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1636, 34)
         Me.MenuStrip1.TabIndex = 31
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         '个人信息查询ToolStripMenuItem
         '
-        Me.个人信息查询ToolStripMenuItem.Font = New System.Drawing.Font("隶书", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.个人信息查询ToolStripMenuItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.个人信息查询ToolStripMenuItem.Name = "个人信息查询ToolStripMenuItem"
-        Me.个人信息查询ToolStripMenuItem.Size = New System.Drawing.Size(141, 23)
+        Me.个人信息查询ToolStripMenuItem.Size = New System.Drawing.Size(156, 30)
         Me.个人信息查询ToolStripMenuItem.Text = "个人信息查询"
         '
         '图书类别管理ToolStripMenuItem
         '
         Me.图书类别管理ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.图书类别查询ToolStripMenuItem, Me.图书类别查询ToolStripMenuItem1})
-        Me.图书类别管理ToolStripMenuItem.Font = New System.Drawing.Font("隶书", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.图书类别管理ToolStripMenuItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.图书类别管理ToolStripMenuItem.Name = "图书类别管理ToolStripMenuItem"
-        Me.图书类别管理ToolStripMenuItem.Size = New System.Drawing.Size(101, 23)
+        Me.图书类别管理ToolStripMenuItem.Size = New System.Drawing.Size(112, 30)
         Me.图书类别管理ToolStripMenuItem.Text = "图书管理"
         '
         '图书类别查询ToolStripMenuItem
         '
         Me.图书类别查询ToolStripMenuItem.Name = "图书类别查询ToolStripMenuItem"
-        Me.图书类别查询ToolStripMenuItem.Size = New System.Drawing.Size(198, 24)
+        Me.图书类别查询ToolStripMenuItem.Size = New System.Drawing.Size(216, 30)
         Me.图书类别查询ToolStripMenuItem.Text = "图书信息查询"
         '
         '图书类别查询ToolStripMenuItem1
         '
         Me.图书类别查询ToolStripMenuItem1.Name = "图书类别查询ToolStripMenuItem1"
-        Me.图书类别查询ToolStripMenuItem1.Size = New System.Drawing.Size(198, 24)
+        Me.图书类别查询ToolStripMenuItem1.Size = New System.Drawing.Size(216, 30)
         Me.图书类别查询ToolStripMenuItem1.Text = "图书类别查询"
         '
         '帮助ToolStripMenuItem
         '
         Me.帮助ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.说明ToolStripMenuItem, Me.退出系统ToolStripMenuItem, Me.帮助ToolStripMenuItem1})
-        Me.帮助ToolStripMenuItem.Font = New System.Drawing.Font("隶书", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.帮助ToolStripMenuItem.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.帮助ToolStripMenuItem.Name = "帮助ToolStripMenuItem"
-        Me.帮助ToolStripMenuItem.Size = New System.Drawing.Size(61, 23)
+        Me.帮助ToolStripMenuItem.Size = New System.Drawing.Size(68, 30)
         Me.帮助ToolStripMenuItem.Text = "帮助"
         '
         '说明ToolStripMenuItem
         '
         Me.说明ToolStripMenuItem.Name = "说明ToolStripMenuItem"
-        Me.说明ToolStripMenuItem.Size = New System.Drawing.Size(158, 24)
+        Me.说明ToolStripMenuItem.Size = New System.Drawing.Size(172, 30)
         Me.说明ToolStripMenuItem.Text = "说明"
         '
         '退出系统ToolStripMenuItem
         '
         Me.退出系统ToolStripMenuItem.Name = "退出系统ToolStripMenuItem"
-        Me.退出系统ToolStripMenuItem.Size = New System.Drawing.Size(158, 24)
+        Me.退出系统ToolStripMenuItem.Size = New System.Drawing.Size(172, 30)
         Me.退出系统ToolStripMenuItem.Text = "退出系统"
         '
         '帮助ToolStripMenuItem1
         '
         Me.帮助ToolStripMenuItem1.Name = "帮助ToolStripMenuItem1"
-        Me.帮助ToolStripMenuItem1.Size = New System.Drawing.Size(158, 24)
+        Me.帮助ToolStripMenuItem1.Size = New System.Drawing.Size(172, 30)
         Me.帮助ToolStripMenuItem1.Text = "帮助"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.White
-        Me.Label6.Font = New System.Drawing.Font("隶书", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Label6.Location = New System.Drawing.Point(1350, 32)
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label6.Location = New System.Drawing.Point(1519, 38)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(69, 20)
+        Me.Label6.Size = New System.Drawing.Size(85, 29)
         Me.Label6.TabIndex = 44
         Me.Label6.Text = "用户名"
         '
@@ -303,19 +309,19 @@ Partial Class User_Index
         '
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.White
-        Me.Label7.Font = New System.Drawing.Font("隶书", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Label7.Location = New System.Drawing.Point(1235, 32)
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label7.Location = New System.Drawing.Point(1389, 38)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(109, 20)
+        Me.Label7.Size = New System.Drawing.Size(133, 29)
         Me.Label7.TabIndex = 45
         Me.Label7.Text = "当前账号："
         '
         'User_Index
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(1454, 752)
+        Me.ClientSize = New System.Drawing.Size(1636, 902)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
@@ -331,6 +337,7 @@ Partial Class User_Index
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TreeView1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "User_Index"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "User_Index"

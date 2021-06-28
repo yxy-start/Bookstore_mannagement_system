@@ -33,7 +33,7 @@ Module ManageUserDao
 
     Public Sub Insertmanage(manageuser As ManageUser)
         Try
-            Dim strsql As String = "insert into 系统用户表(用户名 ,用户密码 ,性别 ,电话 ) values('" & manageuser.Get_manageName() & "','" & manageuser.Get_managePassworld() & "','" & manageuser.Get_manageSex() & "','" & manageuser.Get_manageIphone() & "')"
+            Dim strsql As String = "insert into 系统用户表(用户编号,用户名 ,用户密码 ,性别 ,电话 ) values('" & manageuser.Get_manageId() & "','" & manageuser.Get_manageName() & "','" & manageuser.Get_managePassworld() & "','" & manageuser.Get_manageSex() & "','" & manageuser.Get_manageIphone() & "')"
             Dim objconn As New SqlConnection(conn2)
             Dim objcmd As New SqlCommand(strsql, objconn)
             objconn.Open()
@@ -41,7 +41,7 @@ Module ManageUserDao
             MsgBox("管理员添加成功！")
             objconn.Close()
         Catch ex As Exception
-            MsgBox("Insertmanage:" + ex.Message)
+            MsgBox("添加失败：" + ex.Message)
         End Try
 
     End Sub
@@ -76,5 +76,45 @@ Module ManageUserDao
         End Try
         Return 0
     End Function
+    'Public Function Countmanagerid()
 
+    '    Dim f As Integer
+    '    Try
+    '        Dim objconn As New SqlConnection(conn2)
+    '        Dim strsql As String = "select count(用户编号) from 系统用户表"
+    '        objconn.Open()
+    '        Dim objcmd As New SqlCommand(strsql, objconn)
+    '        f = objcmd.ExecuteScalar
+    '        objconn.Close()
+    '        objcmd.Dispose()
+    '    Catch ex As Exception
+    '        MsgBox("Countmanagerid" + ex.Message)
+    '    End Try
+    '    If (f > 0) Then
+    '        Return 1
+    '    Else
+    '        Return 0
+    '    End If
+    'End Function
+
+    '方法： CountManageUser();
+    '作用：统计用户
+    '参数：(userRegister)
+    Public Function CountManageUser(manageuser As ManageUser)
+        Try
+            Dim objconn As New OleDbConnection(conn)        '创建连接对象
+            Dim objAdap As OleDbDataAdapter                 '创建适配器对象
+            Dim objdataSet As New DataSet
+            Dim strsql As String = "select count(用户编号) from 系统用户表"
+            objAdap = New OleDbDataAdapter(strsql, objconn)
+            objdataSet.Reset() '清除数据集
+            objAdap.Fill(objdataSet, "manage")                '第二个参数就是给这个虚拟表起个名字
+            manageuser.Set_manageCount(objdataSet.Tables("manage").Rows(0).Item(0))   '第一行第一个单元格
+            MsgBox(manageuser.Get_manageCount)
+            Return manageuser
+        Catch ex As Exception
+            MsgBox("CountManageUser" + ex.Message)
+        End Try
+        Return 0
+    End Function
 End Module
